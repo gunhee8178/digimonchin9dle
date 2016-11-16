@@ -1,10 +1,19 @@
 # AndroidRockPaperScissors
 #From Project for group 7 in CMSC436 at UMD 
 
-We are going to add Korean rockpaperscissors(묵찌빠) and some functions.
+#Explain
 
-functions to add
+0. Classic Rock-Paper-Scissors (Basic Program)
 
-set life to 3 times at first
+1. Add game called Korean Rock-Paper-Scissors
+
+2. Add life System, So Players can choose their life.
   
-add, save and rank scores
+3. Add Rank System, Player can see the best score when in the same life
+
+
+Programing by Java
+
+###This is our First opensource project
+###Codes must be not very well
+###plz Understand us !!
