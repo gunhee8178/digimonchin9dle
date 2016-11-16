@@ -1,7 +1,7 @@
 # AndroidRockPaperScissors
 ##From Project for group 7 in CMSC436 at UMD 
 
-!(https://github.com/gunhee8178/digimonchin9dle/blob/master/Rock%20Paper%20Scissors%20Images/title2.jpg)
+![RPS](https://github.com/gunhee8178/digimonchin9dle/blob/master/Rock%20Paper%20Scissors%20Images/title2.jpg)
 #Explain
 
 0. Classic Rock-Paper-Scissors (Basic Program)
