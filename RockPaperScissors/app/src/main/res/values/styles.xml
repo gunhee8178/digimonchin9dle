@@ -10,4 +10,6 @@
         <item name="android:textSize">@dimen/textSize</item>
     </style>
 
+    //hey something is wrong in this part
+
 </resources>
