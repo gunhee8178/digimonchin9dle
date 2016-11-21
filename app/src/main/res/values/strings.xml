@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RockPaperScissors</string>
+    <string name="title_landscape">Let\'s play Rock-Paper-Scissors!</string>
+    <string name="title_portrait">Let\'s play\nRock-Paper-Scissors!</string>
+</resources>
