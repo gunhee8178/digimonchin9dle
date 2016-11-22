@@ -93,6 +93,7 @@ public class MainActivity extends Activity {
                 }
             });
             playButton.startAnimation(fadeIn);
+            super.onBackPressed();
         }
     }
 }
