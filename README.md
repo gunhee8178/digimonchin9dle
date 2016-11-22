@@ -12,5 +12,9 @@
   
 3. Add Rank System, Player can see the best score when in the same life
 
+4. Add Gamble System ( When you win the game, you can get money that the pointer points )
+
+5. Add Quit Button
+
 
 Programing by Java
