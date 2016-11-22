@@ -23,10 +23,10 @@ public class MainActivity extends Activity {
     Button playKorean;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {            // MainActivity 가 실행되도록 함
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);             // xml 문서를 프로그램 실행될때 메모리에 올리는 과정
         playButton = (Button) findViewById(R.id.playButton);
         quit = (Button) findViewById(R.id.quit);
         playKorean = (Button) findViewById(R.id.playKorean);
@@ -56,6 +56,7 @@ public class MainActivity extends Activity {
                             playButton.setVisibility(View.GONE);
                             quit.setVisibility(View.GONE);
                             playKorean.setVisibility(View.GONE);
+                            title.setVisibility(View.INVISIBLE);
                             getFragmentManager().beginTransaction()
                                     .add(R.id.fragment_holder, new GameFragment())
                                     .commit();
@@ -68,7 +69,7 @@ public class MainActivity extends Activity {
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(Bundle outState) {      // 화면 전환 시 데이터를 유지
         // Save the play buttons state so it stays invisible on restart
         outState.putInt(STATE_PLAY_BUTTON, playButton.getVisibility());
         super.onSaveInstanceState(outState);
