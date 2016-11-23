@@ -6,7 +6,8 @@
 0. Classic Rock-Paper-Scissors (Basic Program)
 
 1. Add game called Korean Rock-Paper-Scissors
-
+      1.1 Make Help button for knowing How to play the game.
+      
 2. Add life System, So Players can choose their life.
   
 3. Add Rank System, Player can see the best score when in the same life
