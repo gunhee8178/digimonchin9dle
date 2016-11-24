@@ -38,6 +38,13 @@ public class MainActivity extends Activity {
                 playButton.setVisibility(View.GONE);
         }
 
+        quit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         if (playButton != null) {
             playButton.setOnClickListener(new View.OnClickListener() {
                 @Override
