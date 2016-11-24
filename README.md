@@ -1,20 +1,39 @@
 # AndroidRockPaperScissors
 
 ![RPS](https://github.com/gunhee8178/digimonchin9dle/blob/master/Rock%20Paper%20Scissors%20Images/title2.jpg)
-#Explain
 
-0. Classic Rock-Paper-Scissors (Basic Program)
+#About Our Project...
+We are based on the following project... https://github.com/lacrossebjorne/RockPaperScissors
+We will add some functions and make application look beautiful.
 
-1. Add game called Korean Rock-Paper-Scissors
+#Our Members are...
+
+1. gunhee Han : sub coding, designing
+
+2. seonghun Bae : main coding, documentation
+
+#What we want to add
+
+1. On main page, add two buttons to play Mugjjippa and exit the app.
+
+2. Add Korean Rock-Paper-Scissors called Mugjjippa.
      - Make Help button for knowing How to play the game.
       
-2. Add life System, So Players can choose their life.
+3. Add life System. So Players can choose their life.
   
-3. Add Rank System, Player can see the best score when in the same life
+4. Add Rank System. Players can see the highest score among those who have played the same life.
 
-4. Add Gamble System ( When you win the game, you can get money that the pointer points )
+5. Add Gamble System. When you win the game, you can get money that the pointer points.
 
-5. Add Quit Button
+#Things we can do
 
+1. Play classic Rock-Paper-Scissors
 
+2. Play Mugjjippa
+
+3. Play gamble mode
+
+4. See the rank
+
+#And...
 Programing by Java
