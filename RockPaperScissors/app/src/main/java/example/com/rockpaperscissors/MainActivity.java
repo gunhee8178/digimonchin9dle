@@ -2,6 +2,7 @@ package example.com.rockpaperscissors;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -30,13 +31,12 @@ public class MainActivity extends Activity {
         playButton = (Button) findViewById(R.id.playButton);
         quit = (Button) findViewById(R.id.quit);
         playKorean = (Button) findViewById(R.id.playKorean);
+        title = (TextView) findViewById(R.id.titleView);
 
         if (savedInstanceState != null) {
             if (savedInstanceState.getInt(STATE_PLAY_BUTTON) == View.GONE)
                 playButton.setVisibility(View.GONE);
         }
-
-        title = (TextView) findViewById(R.id.titleView);
 
         if (playButton != null) {
             playButton.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +66,11 @@ public class MainActivity extends Activity {
                 }
             });
         }
+    }
+
+    public void playMJB(View v){
+        Intent intent = new Intent(getApplicationContext(), PlayMJB.class);
+        startActivity(intent);
     }
 
     @Override

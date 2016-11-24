@@ -35,7 +35,8 @@
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:text="Korean RPS"
-            android:textSize="32sp"/>
+            android:textSize="32sp"
+            android:onClick="playMJB"/>
 
         <Button
             android:id="@+id/quit"
