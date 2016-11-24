@@ -2,17 +2,18 @@
 
 ![RPS](https://github.com/gunhee8178/digimonchin9dle/blob/master/Rock%20Paper%20Scissors%20Images/title2.jpg)
 
-#About Our Project...
+## About Our Project...
 We are based on the following project... https://github.com/lacrossebjorne/RockPaperScissors
+
 We will add some functions and make application look beautiful.
 
-#Our Members are...
+## Our Members are...
 
-1. gunhee Han : sub coding, designing
+* gunhee Han : sub coding, designing
 
-2. seonghun Bae : main coding, documentation
+* seonghun Bae : main coding, documentation
 
-#What we want to add
+## What we want to add
 
 1. On main page, add two buttons to play Mugjjippa and exit the app.
 
@@ -25,7 +26,7 @@ We will add some functions and make application look beautiful.
 
 5. Add Gamble System. When you win the game, you can get money that the pointer points.
 
-#Things we can do
+## Things we can do
 
 1. Play classic Rock-Paper-Scissors
 
@@ -35,5 +36,5 @@ We will add some functions and make application look beautiful.
 
 4. See the rank
 
-#And...
+## And...
 Programing by Java
