@@ -25,16 +25,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="false"
-            android:text="Original RPS"
-            android:textSize="32sp"/>
+            android:text="Play RPS"
+            android:textSize="32sp" />
 
         <Button
-            android:id="@+id/playKorean"
+            android:id="@+id/MJB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="false"
-            android:text="Korean RPS"
+            android:text="Play MJB"
             android:textSize="32sp"
             android:onClick="playMJB"/>
 

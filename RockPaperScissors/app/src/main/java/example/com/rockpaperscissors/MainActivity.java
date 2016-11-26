@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
     TextView title;
     Button playButton;
     Button quit;
-    Button playKorean;
+    Button MJB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {            // MainActivity 가 실행되도록 함
@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);             // xml 문서를 프로그램 실행될때 메모리에 올리는 과정
         playButton = (Button) findViewById(R.id.playButton);
         quit = (Button) findViewById(R.id.quit);
-        playKorean = (Button) findViewById(R.id.playKorean);
+        MJB = (Button) findViewById(R.id.MJB);
         title = (TextView) findViewById(R.id.titleView);
 
         if (savedInstanceState != null) {
@@ -62,7 +62,7 @@ public class MainActivity extends Activity {
                         public void onAnimationEnd(Animation a) {
                             playButton.setVisibility(View.GONE);
                             quit.setVisibility(View.GONE);
-                            playKorean.setVisibility(View.GONE);
+                            MJB.setVisibility(View.GONE);
                             title.setVisibility(View.INVISIBLE);
                             getFragmentManager().beginTransaction()
                                     .add(R.id.fragment_holder, new GameFragment())

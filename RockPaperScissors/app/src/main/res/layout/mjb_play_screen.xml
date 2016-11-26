@@ -123,4 +123,15 @@
             android:layout_weight="1"
             android:text="scissors"/>
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/buttons2">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="next"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
 </RelativeLayout>
