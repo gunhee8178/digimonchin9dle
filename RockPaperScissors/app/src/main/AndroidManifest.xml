@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PlayMJB" />
+        <activity android:name=".GameFragment" />
     </application>
 
 </manifest>
