@@ -1,5 +1,6 @@
 package example.com.rockpaperscissors;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
@@ -15,32 +16,35 @@ import android.widget.TextView;
 /**
  * Created by Björn Dalberg on 2016-04-05.
  */
-public class GameFragment extends Fragment {
+public class GameFragment extends Activity {
     TextView humanDraw, cpuDraw, humanScore, ties, cpuScore, winner;
+    Button rock, paper, scissors;
+
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup parentViewGroup, Bundle savedInstanceState) {
+//
+//        final Context contextThemeWrapper = new ContextThemeWrapper(getActivity(), R.style.AppTheme);
+//        LayoutInflater localInflater = inflater.cloneInContext(contextThemeWrapper);
+//
+//        return localInflater.inflate(R.layout.game_fragment, parentViewGroup, false);
+//    }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup parentViewGroup, Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-        final Context contextThemeWrapper = new ContextThemeWrapper(getActivity(), R.style.AppTheme);
-        LayoutInflater localInflater = inflater.cloneInContext(contextThemeWrapper);
+        setContentView(R.layout.game_fragment);
 
-        return localInflater.inflate(R.layout.game_fragment, parentViewGroup, false);
-    }
+        rock = (Button) findViewById(R.id.rock);
+        paper = (Button) findViewById(R.id.paper);
+        scissors = (Button) findViewById(R.id.scissors);
 
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        Button rock = (Button) view.findViewById(R.id.rock);
-        Button paper = (Button) view.findViewById(R.id.paper);
-        Button scissors = (Button) view.findViewById(R.id.scissors);
-
-        humanDraw = (TextView) view.findViewById(R.id.humandraw);
-        cpuDraw = (TextView) view.findViewById(R.id.cpudraw);
-        winner = (TextView) view.findViewById(R.id.winner);
-        humanScore = (TextView) view.findViewById(R.id.humanscore);
-        ties = (TextView) view.findViewById(R.id.tiescount);
-        cpuScore = (TextView) view.findViewById(R.id.cpuscore);
+        humanDraw = (TextView) findViewById(R.id.humandraw);
+        cpuDraw = (TextView) findViewById(R.id.cpudraw);
+        winner = (TextView) findViewById(R.id.winner);
+        humanScore = (TextView) findViewById(R.id.humanscore);
+        ties = (TextView) findViewById(R.id.tiescount);
+        cpuScore = (TextView) findViewById(R.id.cpuscore);
 
         rock.setOnClickListener(new View.OnClickListener() {
             @Override

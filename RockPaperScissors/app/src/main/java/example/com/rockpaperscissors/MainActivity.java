@@ -44,12 +44,12 @@ public class MainActivity extends Activity {
                 playButton.setVisibility(View.GONE);
         }
 
-        quit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+//        quit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                finish();
+//            }
+//        });
 
 //        if (playButton != null) {
 //            playButton.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,7 @@ public class MainActivity extends Activity {
 //            });
 //        }
     }
-    public void playRPS(View v){
+    public void play(View v){
         Intent intent = new Intent(getApplicationContext(), GameFragment.class);
         startActivity(intent);
     }
