@@ -51,35 +51,40 @@ public class MainActivity extends Activity {
             }
         });
 
-        if (playButton != null) {
-            playButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Animation fadeout = new AlphaAnimation(1.f, 0.f);
-                    fadeout.setDuration(1500);
-                    fadeout.setAnimationListener(new Animation.AnimationListener() {
-                        @Override
-                        public void onAnimationStart(Animation animation) {
-                        }
-
-                        public void onAnimationRepeat(Animation a) {
-                        }
-
-                        public void onAnimationEnd(Animation a) {
-                            playButton.setVisibility(View.GONE);
-                            quit.setVisibility(View.GONE);
-                            MJB.setVisibility(View.GONE);
-                            title.setVisibility(View.INVISIBLE);
-                            getFragmentManager().beginTransaction()
-                                    .add(R.id.fragment_holder, new GameFragment())
-                                    .commit();
-                        }
-                    });
-                    playButton.startAnimation(fadeout);
-                }
-            });
-        }
+//        if (playButton != null) {
+//            playButton.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Animation fadeout = new AlphaAnimation(1.f, 0.f);
+//                    fadeout.setDuration(1500);
+//                    fadeout.setAnimationListener(new Animation.AnimationListener() {
+//                        @Override
+//                        public void onAnimationStart(Animation animation) {
+//                        }
+//
+//                        public void onAnimationRepeat(Animation a) {
+//                        }
+//
+//                        public void onAnimationEnd(Animation a) {
+//                            playButton.setVisibility(View.GONE);
+//                            quit.setVisibility(View.GONE);
+//                            MJB.setVisibility(View.GONE);
+//                            title.setVisibility(View.INVISIBLE);
+//                            getFragmentManager().beginTransaction()
+//                                    .add(R.id.fragment_holder, new GameFragment())
+//                                    .commit();
+//                        }
+//                    });
+//                    playButton.startAnimation(fadeout);
+//                }
+//            });
+//        }
     }
+    public void playRPS(View v){
+        Intent intent = new Intent(getApplicationContext(), GameFragment.class);
+        startActivity(intent);
+    }
+
 
     public void playMJB(View v){
         Intent intent = new Intent(getApplicationContext(), PlayMJB.class);

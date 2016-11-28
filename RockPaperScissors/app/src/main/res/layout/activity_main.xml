@@ -26,7 +26,8 @@
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:text="Play RPS"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:onClick="playRPS"/>
 
         <Button
             android:id="@+id/MJB"
