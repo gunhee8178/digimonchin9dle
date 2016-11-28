@@ -9,9 +9,9 @@ We will add some functions and make application look beautiful.
 
 ## Our Members are...
 
-* gunhee Han : sub coding, designing
+* gunhee Han : coding, designing
 
-* seonghun Bae : main coding, documentation
+* seonghun Bae : coding!! , documentation
 
 ## What we want to add
 
