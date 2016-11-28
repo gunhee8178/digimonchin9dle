@@ -1,6 +1,7 @@
 package example.com.rockpaperscissors;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.Intent;
 import android.content.res.Configuration;

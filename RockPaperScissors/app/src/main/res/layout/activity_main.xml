@@ -45,7 +45,8 @@
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:text="Life Setting"
-            android:textSize="32sp"/>
+            android:textSize="32sp"
+            android:onClick="lifeSetting"/>
 
         <Button
             android:id="@+id/quit"
