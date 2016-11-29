@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="69c71b7d3ad86d9e5bbb2ecf973ca152a9d95d22">
+        sha1="5b35c6b42edce8bc206d8b4b12ea55bc1bee907f">
         <dex dex="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_6a47842b16c91755fe00f21fea11bbfcda8df79f\classes.dex" />
     </item>
     <item
@@ -70,7 +70,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="8775e0d48d645e9b919fb00da89374fcca6ed449">
+        sha1="94ee261a7f56d76202d404255a553dc71abd757e">
         <dex dex="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_59942a849d43ea9ba9ff8c6393f1cc2b1bc033eb\classes.dex" />
     </item>
 

@@ -20,9 +20,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-
-    public static Integer life=1;
-
     static final String STATE_PLAY_BUTTON = "play_button";
     TextView title;
     Button playButton;
@@ -34,84 +31,28 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);             // xml 문서를 프로그램 실행될때 메모리에 올리는 과정
+
         playButton = (Button) findViewById(R.id.playButton);
         quit = (Button) findViewById(R.id.quit);
         MJB = (Button) findViewById(R.id.MJB);
         title = (TextView) findViewById(R.id.titleView);
 
-        if (savedInstanceState != null) {
-            if (savedInstanceState.getInt(STATE_PLAY_BUTTON) == View.GONE)
-                playButton.setVisibility(View.GONE);
-        }
-
-//        quit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                finish();
-//            }
-//        });
-
-//        if (playButton != null) {
-//            playButton.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Animation fadeout = new AlphaAnimation(1.f, 0.f);
-//                    fadeout.setDuration(1500);
-//                    fadeout.setAnimationListener(new Animation.AnimationListener() {
-//                        @Override
-//                        public void onAnimationStart(Animation animation) {
-//                        }
-//
-//                        public void onAnimationRepeat(Animation a) {
-//                        }
-//
-//                        public void onAnimationEnd(Animation a) {
-//                            playButton.setVisibility(View.GONE);
-//                            quit.setVisibility(View.GONE);
-//                            MJB.setVisibility(View.GONE);
-//                            title.setVisibility(View.INVISIBLE);
-//                            getFragmentManager().beginTransaction()
-//                                    .add(R.id.fragment_holder, new GameFragment())
-//                                    .commit();
-//                        }
-//                    });
-//                    playButton.startAnimation(fadeout);
-//                }
-//            });
-//        }
+        quit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
+
     public void play(View v){
         Intent intent = new Intent(getApplicationContext(), GameFragment.class);
         startActivity(intent);
     }
 
-
     public void playMJB(View v){
         Intent intent = new Intent(getApplicationContext(), PlayMJB.class);
         startActivity(intent);
-    }
-
-    public void lifeSetting(View v) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
-        builder.setTitle("Set your life");
-
-        final EditText input = new EditText(this);
-        input.setInputType(InputType.TYPE_CLASS_NUMBER);
-        builder.setView(input);
-
-        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                String text = input.getText().toString();
-                life = Integer.parseInt(text);
-            }
-        });
-
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        });
-        builder.show();
     }
 
     @Override
