@@ -10,4 +10,44 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="example.com.rockpaperscissors.gamble">
 
+    <Button
+        android:text="STOP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="104dp"
+        android:id="@+id/stop" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <Button
+            android:id="@+id/rock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="rock"/>
+        <Button
+            android:id="@+id/paper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="paper"/>
+        <Button
+            android:id="@+id/scissors"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.19"
+            android:text="scissors"/>
+    </LinearLayout>
+
 </RelativeLayout>

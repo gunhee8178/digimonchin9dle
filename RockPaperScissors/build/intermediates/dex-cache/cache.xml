@@ -3,21 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jar="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
-        <dex dex="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_16ddae13f93b753c9c2ec315a3f48f81b7060dc3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
-        <dex dex="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.2.1_448d265cbb315aff3130d446ff60a5e316f793b6/classes.dex" />
+        sha1="fdf7729cb2646891eeeb84204c54e04536c2f495">
+        <dex dex="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6dc3806295d868e607b0a7c3c4aea2e0306dbe20/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -30,12 +21,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="e4d98685ef128fbc1577d7c8bd65b82401fbabfc">
-        <dex dex="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6dc3806295d868e607b0a7c3c4aea2e0306dbe20/classes.dex" />
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_16ddae13f93b753c9c2ec315a3f48f81b7060dc3/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -63,6 +54,15 @@
         revision="23.0.2"
         sha1="673d77a5bbddd766037f088e775df525c46407f0">
         <dex dex="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.2.1_9ca59f5502a8c47e70fcbb7cc12b0d5e297758f4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.2.1_448d265cbb315aff3130d446ff60a5e316f793b6/classes.dex" />
     </item>
     <item
         is-multidex="true"
