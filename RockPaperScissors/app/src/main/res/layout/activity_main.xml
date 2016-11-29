@@ -48,6 +48,15 @@
             android:text="Life Setting"
             android:textSize="32sp"
             android:onClick="lifeSetting"/>
+        <Button
+            android:id="@+id/gamble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:text="Gamble"
+            android:textSize="32sp"
+            android:onClick="Gamble"/>
 
         <Button
             android:id="@+id/quit"

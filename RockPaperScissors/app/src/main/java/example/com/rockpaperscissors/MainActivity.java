@@ -84,7 +84,16 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(getApplicationContext(), GameFragment.class);
         startActivity(intent);
     }
+    public void Gamble(View v){
+        Intent intent = new Intent(getApplicationContext(), gamble.class);
+        startActivity(intent);
+    }
 
+
+//    public void (View v){
+//        Intent intent = new Intent(getApplicationContext(), Life.class);
+//        startActivity(intent);
+//    }
 
     public void playMJB(View v){
         Intent intent = new Intent(getApplicationContext(), PlayMJB.class);
