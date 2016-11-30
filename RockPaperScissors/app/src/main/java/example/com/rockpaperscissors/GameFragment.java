@@ -1,8 +1,11 @@
 package example.com.rockpaperscissors;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
@@ -19,15 +22,6 @@ import android.widget.TextView;
 public class GameFragment extends Activity {
     TextView humanDraw, cpuDraw, humanScore, ties, cpuScore, winner;
     Button rock, paper, scissors;
-
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup parentViewGroup, Bundle savedInstanceState) {
-//
-//        final Context contextThemeWrapper = new ContextThemeWrapper(getActivity(), R.style.AppTheme);
-//        LayoutInflater localInflater = inflater.cloneInContext(contextThemeWrapper);
-//
-//        return localInflater.inflate(R.layout.game_fragment, parentViewGroup, false);
-//    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -80,8 +74,7 @@ public class GameFragment extends Activity {
             Integer tie = Integer.parseInt(ties.getText().toString());
             tie++;
             ties.setText(tie.toString());
-        }
-        else if (humanDraw.equals("ROCK")) {
+        } else if (humanDraw.equals("ROCK")) {
             if (cpuDraw.equals("SCISSORS")) {
                 winner.setText("ROCK WINS!");
                 Integer humanWins = Integer.parseInt(humanScore.getText().toString());
@@ -93,8 +86,7 @@ public class GameFragment extends Activity {
                 cpuWins++;
                 cpuScore.setText(cpuWins.toString());
             }
-        }
-        else if (humanDraw.equals("PAPER")) {
+        } else if (humanDraw.equals("PAPER")) {
             if (cpuDraw.equals("ROCK")) {
                 winner.setText("PAPER WINS!");
                 Integer humanWins = Integer.parseInt(humanScore.getText().toString());
@@ -106,8 +98,7 @@ public class GameFragment extends Activity {
                 cpuWins++;
                 cpuScore.setText(cpuWins.toString());
             }
-        }
-        else {
+        } else {
             if (cpuDraw.equals("PAPER")) {
                 winner.setText("SCISSORS WINS");
                 Integer humanWins = Integer.parseInt(humanScore.getText().toString());
@@ -119,6 +110,20 @@ public class GameFragment extends Activity {
                 cpuWins++;
                 cpuScore.setText(cpuWins.toString());
             }
+        }
+
+        if(Integer.parseInt(cpuScore.getText().toString())==3){
+            AlertDialog.Builder alert = new AlertDialog.Builder(GameFragment.this);
+            alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                }
+            });
+            alert.setTitle("Title");
+            alert.setMessage("Game Over!");
+            alert.show();
         }
     }
 }
