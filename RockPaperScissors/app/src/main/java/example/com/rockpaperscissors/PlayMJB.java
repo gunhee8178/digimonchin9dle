@@ -86,9 +86,12 @@ public class PlayMJB extends Activity{
                 alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
                     }
                 });
-                alert.setMessage("Text Message");
+                alert.setTitle("Title");
+                alert.setMessage("Game Over!");
                 alert.show();
             }
         } else if (humanDraw.equals("ROCK")) {
