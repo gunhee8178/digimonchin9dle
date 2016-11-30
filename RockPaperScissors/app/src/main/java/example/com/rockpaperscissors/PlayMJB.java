@@ -1,7 +1,9 @@
 package example.com.rockpaperscissors;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -79,6 +81,16 @@ public class PlayMJB extends Activity{
             cpuWins2++;
             cpuScore2.setText(cpuWins2.toString());
             yourturn = 0;
+            if(cpuWins2==3){
+                AlertDialog.Builder alert = new AlertDialog.Builder(PlayMJB.this);
+                alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+                alert.setMessage("Text Message");
+                alert.show();
+            }
         } else if (humanDraw.equals("ROCK")) {
             if (cpuDraw.equals("SCISSORS")) {
                 winner2.setText("Your Turn!");
