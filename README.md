@@ -21,6 +21,7 @@ We will add some functions and make application look beautiful.
      - Make Help button for knowing How to play the game.
       
 3. Add life System. So Players can choose their life.
+     - We realized that it was difficult for us to set lives. So we locked lives. When the player loses 3 times, the game ends and a pop-up opens.
   
 4. Add Rank System. Players can see the highest score among those who have played the same life.
 
