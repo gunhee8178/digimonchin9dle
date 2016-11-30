@@ -13,72 +13,68 @@
         android:layout_centerHorizontal="true"
         android:textSize="32sp"
         android:gravity="center" />
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <Button
             android:id="@+id/playButton"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:text="Play RPS"
             android:textSize="32sp"
-            android:onClick="play" />
+            android:onClick="play"
+            android:layout_width="250dp" />
 
         <Button
             android:id="@+id/MJB"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:text="Play MJB"
             android:textSize="32sp"
-            android:onClick="playMJB"/>
+            android:onClick="playMJB"
+            android:layout_width="250dp" />
 
         <Button
             android:id="@+id/life"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:text="Life Setting"
             android:textSize="32sp"
-            android:onClick="lifeSetting"/>
+            android:onClick="lifeMod"
+            android:layout_width="250dp" />
+
         <Button
             android:id="@+id/gamble"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:text="Gamble"
             android:textSize="32sp"
-            android:onClick="Gamble"/>
+            android:onClick="Gamble"
+            android:layout_width="250dp" />
 
-        <Button
-            android:id="@+id/quit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="quit"
-            android:textSize="32sp"/>
     </LinearLayout>
 
-
-    <FrameLayout
-        android:id="@+id/fragment_holder"
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
+    <Button
+        android:id="@+id/quit"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:text="quit"
+        android:textSize="32sp"
+        android:layout_width="150dp"
+        android:layout_marginBottom="52dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="18dp">
-
-    </FrameLayout>
+        android:layout_alignRight="@+id/titleView"
+        android:layout_alignEnd="@+id/titleView" />
 
 
 </RelativeLayout>

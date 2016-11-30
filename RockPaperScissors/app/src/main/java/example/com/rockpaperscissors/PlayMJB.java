@@ -18,18 +18,13 @@ import android.widget.TextView;
 public class PlayMJB extends Activity{
     Button rock2, paper2, scissors2;
     TextView humanDraw2, cpuDraw2, winner2, humanScore2, cpuScore2;
-
     Integer yourturn=0;
-
-    final static MainActivity mainActivity = new MainActivity();
-    static Integer life = mainActivity.life;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.mjb_play_screen);
-
 
         rock2 = (Button) findViewById(R.id.rock2);
         paper2 = (Button) findViewById(R.id.paper2);
@@ -40,7 +35,6 @@ public class PlayMJB extends Activity{
         winner2 = (TextView) findViewById(R.id.winner2);
         humanScore2 = (TextView) findViewById(R.id.humanscore2);
         cpuScore2 = (TextView) findViewById(R.id.cpuscore2);
-
 
         rock2.setOnClickListener(new View.OnClickListener() {
             @Override

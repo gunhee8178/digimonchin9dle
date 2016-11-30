@@ -34,8 +34,13 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
+<<<<<<< HEAD
         sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
         <dex dex="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.2.1_690565b39bf9cc6e309cfc7e38b8c1edf2b9de6e/classes.dex" />
+=======
+        sha1="5b35c6b42edce8bc206d8b4b12ea55bc1bee907f">
+        <dex dex="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_6a47842b16c91755fe00f21fea11bbfcda8df79f\classes.dex" />
+>>>>>>> origin/master
     </item>
     <item
         is-multidex="true"
@@ -70,8 +75,13 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
+<<<<<<< HEAD
         sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
         <dex dex="/Users/hangunhee/Desktop/digimonchin9dle/RockPaperScissors/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.2.1_16b9a55bdbf60869fbdff717d6c7158a8e030e8d/classes.dex" />
+=======
+        sha1="94ee261a7f56d76202d404255a553dc71abd757e">
+        <dex dex="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_59942a849d43ea9ba9ff8c6393f1cc2b1bc033eb\classes.dex" />
+>>>>>>> origin/master
     </item>
 
 </items>
