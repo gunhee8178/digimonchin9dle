@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.InputType;
@@ -54,6 +55,21 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    public void ranking(View v) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+        SharedPreferences sf = getSharedPreferences("text", 0);
+        String str = sf.getString("score", "");
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        alert.setTitle("Game Over!");
+        alert.setMessage(str);
+        alert.show();
+    }
 
 //<<<<<<< HEAD
 //    public void (View v){
