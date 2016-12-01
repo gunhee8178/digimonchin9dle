@@ -43,13 +43,12 @@
             android:layout_width="250dp" />
 
         <Button
-            android:id="@+id/life"
+            android:id="@+id/rank"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="false"
-            android:text="Life Setting"
+            android:text="Show Ranking"
             android:textSize="32sp"
-            android:onClick="lifeMod"
             android:layout_width="250dp" />
 
         <Button
