@@ -121,8 +121,8 @@ public class GameFragment extends Activity {
                     startActivity(intent);
                 }
             });
-            alert.setTitle("Title");
-            alert.setMessage("Game Over!");
+            alert.setTitle("Game Over!");
+            alert.setMessage("Your score is "+Integer.parseInt(humanScore.getText().toString())+" wins, "+Integer.parseInt(ties.getText().toString())+" ties!");
             alert.show();
         }
     }

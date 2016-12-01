@@ -90,8 +90,8 @@ public class PlayMJB extends Activity{
                         startActivity(intent);
                     }
                 });
-                alert.setTitle("Title");
-                alert.setMessage("Game Over!");
+                alert.setTitle("Game Over!");
+                alert.setMessage("Your score is "+Integer.parseInt(humanScore2.getText().toString())+" wins!");
                 alert.show();
             }
         } else if (humanDraw.equals("ROCK")) {
