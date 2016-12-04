@@ -2,20 +2,11 @@ package example.com.rockpaperscissors;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class PlayMJB extends Activity{
@@ -26,8 +17,7 @@ public class PlayMJB extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.mjb_play_screen);
+        setContentView(R.layout.play_mjb);
 
         rock2 = (Button) findViewById(R.id.rock2);
         paper2 = (Button) findViewById(R.id.paper2);
@@ -82,7 +72,7 @@ public class PlayMJB extends Activity{
             cpuWins2++;
             cpuScore2.setText(cpuWins2.toString());
             yourturn = 0;
-            if(cpuWins2==LifeSetting.life){
+            if(cpuWins2==Life.life){
                 AlertDialog.Builder alert = new AlertDialog.Builder(PlayMJB.this);
                 alert.setTitle("Game Over!");
                 alert.setMessage("Your score is "+Integer.parseInt(humanScore2.getText().toString())+" wins!");
