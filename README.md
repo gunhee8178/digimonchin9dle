@@ -23,7 +23,8 @@ We will add some functions and make application look beautiful.
       
 3. Add life System. So Players can choose their life.
      
-     - We realized that it was difficult for us to set lives. So we locked lives. When the player loses 3 times, the game ends and a pop-up opens.
+     - (delete) We realized that it was difficult for us to set lives. So we locked lives. When the player loses 3 times, the game ends and a pop-up opens.
+     - (2016-12-04) You can set your life when you click 'Life Setting' button on main activity. You can only enter number and if you dont enter anything, you will see a Toast that says "Please Enter". Life value set by default is 3.
   
 4. Add Rank System. Players can see the highest score among those who have played the same life.
 
