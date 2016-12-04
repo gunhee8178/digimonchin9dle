@@ -16,8 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".PlayMJB" />
-        <activity android:name=".GameFragment" />
-        <activity android:name=".gamble"></activity>
+        <activity android:name=".PlayRPS" />
+        <activity android:name=".gamble"/>
     </application>
 
 </manifest>
