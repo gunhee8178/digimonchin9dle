@@ -82,21 +82,17 @@ public class PlayMJB extends Activity{
             cpuWins2++;
             cpuScore2.setText(cpuWins2.toString());
             yourturn = 0;
-            if(cpuWins2==3){
+            if(cpuWins2==LifeSetting.life){
                 AlertDialog.Builder alert = new AlertDialog.Builder(PlayMJB.this);
+                alert.setTitle("Game Over!");
+                alert.setMessage("Your score is "+Integer.parseInt(humanScore2.getText().toString())+" wins!");
                 alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        SharedPreferences sf = getSharedPreferences("text", 0);
-                        SharedPreferences.Editor editor = sf.edit();
-                        editor.putString("score", humanScore2.getText().toString());
-                        editor.commit();
                         startActivity(intent);
                     }
                 });
-                alert.setTitle("Game Over!");
-                alert.setMessage("Your score is "+Integer.parseInt(humanScore2.getText().toString())+" wins!");
                 alert.show();
             }
         } else if (humanDraw.equals("ROCK")) {

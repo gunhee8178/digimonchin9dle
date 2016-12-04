@@ -20,6 +20,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import static android.R.id.edit;
+
 public class MainActivity extends Activity {
     static final String STATE_PLAY_BUTTON = "play_button";
     TextView title;
@@ -57,17 +59,20 @@ public class MainActivity extends Activity {
 
     public void ranking(View v) {
         AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
-        SharedPreferences sf = getSharedPreferences("text", 0);
-        String str = sf.getString("score", "");
+        alert.setTitle("Game Over!");
+        alert.setMessage("ha");
+        final EditText edit = new EditText(this);
+        alert.setView(edit);
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
+            public void onClick(DialogInterface dialog, int whichButton) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                String setlife = edit.getText().toString();
+                LifeSetting.life = Integer.parseInt(setlife);
                 startActivity(intent);
             }
         });
-        alert.setTitle("Game Over!");
-        alert.setMessage(str);
+
         alert.show();
     }
 
