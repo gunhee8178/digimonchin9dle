@@ -80,6 +80,7 @@ public class PlayMJB extends Activity{
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        finish();
                         startActivity(intent);
                     }
                 });

@@ -16,7 +16,6 @@ public class PlayRPS extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.play_rps);
 
         rock = (Button) findViewById(R.id.rock);
@@ -108,6 +107,7 @@ public class PlayRPS extends Activity {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    finish();
                     startActivity(intent);
                 }
             });

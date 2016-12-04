@@ -5,10 +5,12 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
     static final String STATE_PLAY_BUTTON = "play_button";
@@ -28,28 +30,33 @@ public class MainActivity extends Activity {
 
     public void playRPS(View v) {
         Intent intent = new Intent(getApplicationContext(), PlayRPS.class);
+        finish();
         startActivity(intent);
     }
 
     public void playMJB(View v) {
         Intent intent = new Intent(getApplicationContext(), PlayMJB.class);
+        finish();
         startActivity(intent);
     }
 
     public void setLife(View v) {
         AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
         final EditText edit = new EditText(this);
+        edit.setInputType(InputType.TYPE_CLASS_NUMBER);
+        edit.setHint("Set your life");
         alert.setTitle("Life Setting");
-        alert.setMessage("Set you life.");
         alert.setView(edit);
 
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 String strlife = edit.getText().toString();
-                Life.life = Integer.parseInt(strlife);
-                startActivity(intent);
+                if(strlife.getBytes().length <= 0) {
+                    Toast.makeText(getApplicationContext(), "Please Enter", Toast.LENGTH_SHORT).show();
+                } else {
+                    Life.life = Integer.parseInt(strlife);
+                }
             }
         });
         alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -63,6 +70,7 @@ public class MainActivity extends Activity {
 
     public void Gamble(View v) {
         Intent intent = new Intent(getApplicationContext(), gamble.class);
+        finish();
         startActivity(intent);
     }
 
