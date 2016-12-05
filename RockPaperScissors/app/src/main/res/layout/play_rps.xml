@@ -108,20 +108,26 @@
         <Button
             android:id="@+id/rock"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="rock"/>
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:background="@drawable/rock"/>/>
         <Button
             android:id="@+id/paper"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="paper"/>
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:background="@drawable/paper"/>/>
         <Button
             android:id="@+id/scissors"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="scissors"/>
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:background="@drawable/scissors"/>/>
     </LinearLayout>
 </RelativeLayout>
