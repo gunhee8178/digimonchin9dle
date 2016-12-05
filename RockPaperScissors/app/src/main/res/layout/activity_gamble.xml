@@ -10,17 +10,69 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="example.com.rockpaperscissors.gamble">
 
-    <Button
-        android:text="STOP"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="104dp"
-        android:id="@+id/stop" />
+        android:id="@+id/humantextview"
+        android:text="YOU"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/tiestextview"
+        android:layout_toStartOf="@+id/tiestextview"
+        android:layout_marginRight="50dp"
+        android:layout_marginEnd="50dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tiestextview"
+        android:text="TIES"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/humantextview"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cputextview"
+        android:text="CPU"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/tiestextview"
+        android:layout_toRightOf="@+id/tiestextview"
+        android:layout_toEndOf="@+id/tiestextview"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/humanscore"
+        android:text="0"
+        android:textStyle="bold"
+        android:textColor="@color/colorScoreboard"
+        android:layout_below="@+id/humantextview"
+        android:layout_alignRight="@+id/humantextview"
+        android:layout_alignEnd="@+id/humantextview"
+        android:freezesText="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tiescount"
+        android:text="0"
+        android:textStyle="bold"
+        android:textColor="@color/colorScoreboard"
+        android:layout_below="@+id/tiestextview"
+        android:layout_toLeftOf="@+id/cputextview"
+        android:layout_toStartOf="@+id/cputextview"
+        android:freezesText="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cpuscore"
+        android:text="0"
+        android:textStyle="bold"
+        android:textColor="@color/colorScoreboard"
+        android:layout_below="@+id/cputextview"
+        android:layout_alignRight="@+id/cputextview"
+        android:layout_alignEnd="@+id/cputextview"
+        android:freezesText="true"/>
 
     <LinearLayout
         android:id="@+id/buttons"
@@ -50,4 +102,45 @@
             android:text="scissors"/>
     </LinearLayout>
 
-</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/drawstextview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignBottom="@+id/buttons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:id="@+id/humandraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="50dp"/>
+        <TextView
+            android:id="@+id/cpudraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/winner"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <Button
+        android:text="STOP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stop"
+        android:layout_marginBottom="67dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/cputextview"
+        android:layout_alignStart="@+id/cputextview" />
+
+    </RelativeLayout>
+
