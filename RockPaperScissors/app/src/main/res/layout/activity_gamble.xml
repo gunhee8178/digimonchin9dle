@@ -114,15 +114,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="50dp"/>
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
         <TextView
             android:id="@+id/cpudraw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="50dp"
             android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"/>
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -131,6 +133,7 @@
             android:layout_marginTop="30dp"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
+
 
     <Button
         android:text="STOP"
@@ -142,5 +145,20 @@
         android:layout_alignLeft="@+id/cputextview"
         android:layout_alignStart="@+id/cputextview" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txmoney"
+        android:textStyle="bold"
+        android:textColor="@color/colorScoreboard"
+        android:freezesText="true"
+        android:layout_alignBottom="@+id/stop"
+        android:layout_alignRight="@+id/tiescount"
+        android:layout_alignEnd="@+id/tiescount"
+        android:layout_alignLeft="@+id/humanscore"
+        android:layout_alignStart="@+id/humanscore"
+        android:layout_alignTop="@+id/stop"
+        android:text="500" />
     </RelativeLayout>
+
 

@@ -10,10 +10,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import static example.com.rockpaperscissors.Money.money;
+
 public class gamble extends AppCompatActivity {
 
-        TextView humanDraw, cpuDraw, humanScore, ties, cpuScore, winner;
+        TextView humanDraw, cpuDraw, humanScore, ties, cpuScore, winner, txmoney;
         Button rock, paper, scissors;
+        int best = money;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,9 @@ public class gamble extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     humanDraw.setText("ROCK");
+                    Integer money = Integer.parseInt(txmoney.getText().toString());
+                    money -= 100;
+                    txmoney.setText(money.toString());
                     cpuDraw.setText(GameAI.getDraw());
                     checkDrawWinner("ROCK", cpuDraw.getText().toString());
                 }
@@ -44,8 +50,12 @@ public class gamble extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     humanDraw.setText("PAPER");
+                    Integer money = Integer.parseInt(txmoney.getText().toString());
+                    money -= 100;
+                    txmoney.setText(money.toString());
                     cpuDraw.setText(GameAI.getDraw());
                     checkDrawWinner("PAPER", cpuDraw.getText().toString());
+
                 }
             });
 
@@ -53,70 +63,89 @@ public class gamble extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     humanDraw.setText("SCISSORS ");
+                    Integer money = Integer.parseInt(txmoney.getText().toString());
+                    money -= 100;
+                    txmoney.setText(money.toString());
                     cpuDraw.setText(GameAI.getDraw());
                     checkDrawWinner("SCISSORS", cpuDraw.getText().toString());
+
                 }
             });
         }
 
         private void checkDrawWinner(String humanDraw, String cpuDraw) {
             if (humanDraw.equals(cpuDraw)) {
-                winner.setText("TIE!");
+                winner.setText("TIE! DO It ONEMORE!");
+                Integer money = Integer.parseInt(txmoney.getText().toString());
+                money += 100;
+                txmoney.setText(money.toString());
                 Integer tie = Integer.parseInt(ties.getText().toString());
                 tie++;
                 ties.setText(tie.toString());
             } else if (humanDraw.equals("ROCK")) {
                 if (cpuDraw.equals("SCISSORS")) {
-                    winner.setText("ROCK WINS!");
+                    winner.setText("WIN!");
                     Integer humanWins = Integer.parseInt(humanScore.getText().toString());
                     humanWins++;
+                    Integer money = Integer.parseInt(txmoney.getText().toString());
+                    money+=200;
+                    if(money > best){ money = best;}
                     humanScore.setText(humanWins.toString());
+                    txmoney.setText(money.toString());
                 } else {
-                    winner.setText("PAPER WINS!");
+                    winner.setText("LOSE!");
                     Integer cpuWins = Integer.parseInt(cpuScore.getText().toString());
                     cpuWins++;
                     cpuScore.setText(cpuWins.toString());
                 }
             } else if (humanDraw.equals("PAPER")) {
                 if (cpuDraw.equals("ROCK")) {
-                    winner.setText("PAPER WINS!");
+                    winner.setText("WIN!");
                     Integer humanWins = Integer.parseInt(humanScore.getText().toString());
                     humanWins++;
+                    Integer money = Integer.parseInt(txmoney.getText().toString());
+                    money+=200;
+                    if(money > best){ money = best;}
                     humanScore.setText(humanWins.toString());
+                    txmoney.setText(money.toString());
                 } else {
-                    winner.setText("SCISSORS WINS!");
+                    winner.setText("LOSE!");
                     Integer cpuWins = Integer.parseInt(cpuScore.getText().toString());
                     cpuWins++;
                     cpuScore.setText(cpuWins.toString());
                 }
             } else {
                 if (cpuDraw.equals("PAPER")) {
-                    winner.setText("SCISSORS WINS");
+                    winner.setText("WIN!");
                     Integer humanWins = Integer.parseInt(humanScore.getText().toString());
                     humanWins++;
+                    Integer money = Integer.parseInt(txmoney.getText().toString());
+                    money+=200;
+                    if(money > best){ money = best;}
                     humanScore.setText(humanWins.toString());
+                    txmoney.setText(money.toString());
                 } else {
-                    winner.setText("PAPER WINS!");
+                    winner.setText("LOSE!");
                     Integer cpuWins = Integer.parseInt(cpuScore.getText().toString());
                     cpuWins++;
                     cpuScore.setText(cpuWins.toString());
                 }
             }
 
-//            if(Integer.parseInt(cpuScore.getText().toString())==Life.life){
-//                AlertDialog.Builder alert = new AlertDialog.Builder(this);
-//                alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//                        finish();
-//                        startActivity(intent);
-//                    }
-//                });
-//                alert.setTitle("Game Over!");
-//                alert.setMessage("Your score is "+Integer.parseInt(humanScore.getText().toString())+" wins, "+Integer.parseInt(ties.getText().toString())+" ties!");
-//                alert.show();
-//            }
+            if(money == 0){
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        finish();
+                        startActivity(intent);
+                    }
+                });
+                alert.setTitle("Game Over!");
+                alert.setMessage("Your Highest money : "+ best );
+                alert.show();
+            }
         }
     }
 
