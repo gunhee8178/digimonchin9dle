@@ -33,7 +33,11 @@ public class gamble extends AppCompatActivity {
             humanScore = (TextView) findViewById(R.id.humanscore);
             ties = (TextView) findViewById(R.id.tiescount);
             cpuScore = (TextView) findViewById(R.id.cpuscore);
+            txmoney = (TextView) findViewById(R.id.money);
 
+//            Integer money = Integer.parseInt(txmoney.getText().toString());
+            money = Money.money;
+            txmoney.setText("500");
             rock.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
