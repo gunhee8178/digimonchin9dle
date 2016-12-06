@@ -88,10 +88,11 @@ public class MainActivity extends Activity {
         SharedPreferences mPrefs = getSharedPreferences("Rank", MODE_PRIVATE);
         TextView t = (TextView) findViewById(R.id.text);
         t.setText("Ranking!!");
-        System.out.println(ranklist.size());
         for(int i=0; i<ranklist.size(); i++) {
-            String irank = mPrefs.getString(i + "rank", null);
-            t.append("\n"+irank);
+            String rank1 = mPrefs.getString(i + "rank_name", null);
+            String rank2 = mPrefs.getString(i + "rank_score", null);
+            t.append("\n"+rank1);
+            t.append(rank2);
         }
     }
 

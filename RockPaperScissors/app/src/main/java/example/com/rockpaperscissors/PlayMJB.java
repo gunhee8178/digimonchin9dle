@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Collections;
@@ -77,11 +78,19 @@ public class PlayMJB extends Activity{
             cpuScore2.setText(cpuWins2.toString());
             yourturn = 0;
             if(cpuWins2==Life.life){
+                String score = humanScore2.getText().toString();
                 AlertDialog.Builder alert = new AlertDialog.Builder(PlayMJB.this);
                 alert.setTitle("Game Over!");
-                alert.setMessage("Your score is "+Integer.parseInt(humanScore2.getText().toString())+" wins!");
+                alert.setMessage("Your score is "+Integer.parseInt(score)+" wins!");
 
-                Ranking rank = new Ranking(humanScore2.getText().toString());
+                EditText edit = new EditText(this);
+                edit.setHint("Enter your name");
+                alert.setView(edit);
+                String name2 = edit.getText().toString();
+                System.out.println(name2);
+
+
+                Ranking rank = new Ranking(name2, score);
                 MainActivity.ranklist.add(rank);
                 for(int j=0; j<MainActivity.ranklist.size()-1; j++) {
                     for (int i = 0; i < MainActivity.ranklist.size() - 1-j; i++) {
@@ -89,15 +98,18 @@ public class PlayMJB extends Activity{
                             String tmp = MainActivity.ranklist.get(i).getScore();
                             MainActivity.ranklist.get(i).setScore(MainActivity.ranklist.get(i + 1).getScore());
                             MainActivity.ranklist.get(i + 1).setScore(tmp);
+                            String tmp2 = MainActivity.ranklist.get(i).getName();
+                            MainActivity.ranklist.get(i).setName(MainActivity.ranklist.get(i + 1).getName());
+                            MainActivity.ranklist.get(i + 1).setName(tmp2);
                         }
                     }
                 }
 
                 SharedPreferences prefs = getSharedPreferences("Rank", MODE_PRIVATE);
                 SharedPreferences.Editor editor = prefs.edit();
-                String n = humanScore2.getText().toString();
                 for(int i=0; i<MainActivity.ranklist.size(); i++) {
-                    editor.putString(i + "rank", MainActivity.ranklist.get(i).getScore());
+                    editor.putString(i + "rank_name", MainActivity.ranklist.get(i).getName());
+                    editor.putString(i + "rank_score", MainActivity.ranklist.get(i).getScore());
                 }
                 editor.commit();
 
