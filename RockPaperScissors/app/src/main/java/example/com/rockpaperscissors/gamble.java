@@ -10,12 +10,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import static example.com.rockpaperscissors.Money.money;
+//import static example.com.rockpaperscissors.Money.money;
 
-public class gamble extends AppCompatActivity {
+public class gamble extends Activity {
 
         TextView humanDraw, cpuDraw, humanScore, ties, cpuScore, winner, txmoney;
         Button rock, paper, scissors;
+        int money = 500;
         int best = money;
 
         @Override
@@ -36,15 +37,15 @@ public class gamble extends AppCompatActivity {
             txmoney = (TextView) findViewById(R.id.money);
 
 //            Integer money = Integer.parseInt(txmoney.getText().toString());
-            money = Money.money;
-            txmoney.setText("500");
+//            money = Money.money;
+//            txmoney.setText("500");
             rock.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     humanDraw.setText("ROCK");
-                    Integer money = Integer.parseInt(txmoney.getText().toString());
+//                    Integer money = Integer.parseInt(txmoney.getText().toString());
                     money -= 100;
-                    txmoney.setText(money.toString());
+//                    txmoney.setText(money.toString());
                     cpuDraw.setText(GameAI.getDraw());
                     checkDrawWinner("ROCK", cpuDraw.getText().toString());
                 }
@@ -54,9 +55,9 @@ public class gamble extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     humanDraw.setText("PAPER");
-                    Integer money = Integer.parseInt(txmoney.getText().toString());
+//                    Integer money = Integer.parseInt(txmoney.getText().toString());
                     money -= 100;
-                    txmoney.setText(money.toString());
+//                    txmoney.setText(money.toString());
                     cpuDraw.setText(GameAI.getDraw());
                     checkDrawWinner("PAPER", cpuDraw.getText().toString());
 
@@ -67,9 +68,9 @@ public class gamble extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     humanDraw.setText("SCISSORS ");
-                    Integer money = Integer.parseInt(txmoney.getText().toString());
+//                    Integer money = Integer.parseInt(txmoney.getText().toString());
                     money -= 100;
-                    txmoney.setText(money.toString());
+//                    txmoney.setText(money.toString());
                     cpuDraw.setText(GameAI.getDraw());
                     checkDrawWinner("SCISSORS", cpuDraw.getText().toString());
 
@@ -80,9 +81,9 @@ public class gamble extends AppCompatActivity {
         private void checkDrawWinner(String humanDraw, String cpuDraw) {
             if (humanDraw.equals(cpuDraw)) {
                 winner.setText("TIE! DO It ONEMORE!");
-                Integer money = Integer.parseInt(txmoney.getText().toString());
+//                Integer money = Integer.parseInt(txmoney.getText().toString());
                 money += 100;
-                txmoney.setText(money.toString());
+//                txmoney.setText(money.toString());
                 Integer tie = Integer.parseInt(ties.getText().toString());
                 tie++;
                 ties.setText(tie.toString());
@@ -91,11 +92,11 @@ public class gamble extends AppCompatActivity {
                     winner.setText("WIN!");
                     Integer humanWins = Integer.parseInt(humanScore.getText().toString());
                     humanWins++;
-                    Integer money = Integer.parseInt(txmoney.getText().toString());
+//                    Integer money = Integer.parseInt(txmoney.getText().toString());
                     money+=200;
-                    if(money > best){ money = best;}
+                    if(money > best){ best = money;}
                     humanScore.setText(humanWins.toString());
-                    txmoney.setText(money.toString());
+//                    txmoney.setText(money.toString());
                 } else {
                     winner.setText("LOSE!");
                     Integer cpuWins = Integer.parseInt(cpuScore.getText().toString());
@@ -107,11 +108,11 @@ public class gamble extends AppCompatActivity {
                     winner.setText("WIN!");
                     Integer humanWins = Integer.parseInt(humanScore.getText().toString());
                     humanWins++;
-                    Integer money = Integer.parseInt(txmoney.getText().toString());
+//                    Integer money = Integer.parseInt(txmoney.getText().toString());
                     money+=200;
-                    if(money > best){ money = best;}
+                    if(money > best){ best = money;}
                     humanScore.setText(humanWins.toString());
-                    txmoney.setText(money.toString());
+//                    txmoney.setText(money.toString());
                 } else {
                     winner.setText("LOSE!");
                     Integer cpuWins = Integer.parseInt(cpuScore.getText().toString());
@@ -123,11 +124,11 @@ public class gamble extends AppCompatActivity {
                     winner.setText("WIN!");
                     Integer humanWins = Integer.parseInt(humanScore.getText().toString());
                     humanWins++;
-                    Integer money = Integer.parseInt(txmoney.getText().toString());
+//                    Integer money = Integer.parseInt(txmoney.getText().toString());
                     money+=200;
-                    if(money > best){ money = best;}
+                    if(money > best){ best = money;}
                     humanScore.setText(humanWins.toString());
-                    txmoney.setText(money.toString());
+//                    txmoney.setText(money.toString());
                 } else {
                     winner.setText("LOSE!");
                     Integer cpuWins = Integer.parseInt(cpuScore.getText().toString());
