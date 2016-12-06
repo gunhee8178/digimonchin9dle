@@ -4,10 +4,14 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.Collections;
+import java.util.Comparator;
 
 public class PlayMJB extends Activity{
     Button rock2, paper2, scissors2;
@@ -76,6 +80,27 @@ public class PlayMJB extends Activity{
                 AlertDialog.Builder alert = new AlertDialog.Builder(PlayMJB.this);
                 alert.setTitle("Game Over!");
                 alert.setMessage("Your score is "+Integer.parseInt(humanScore2.getText().toString())+" wins!");
+
+                Ranking rank = new Ranking(humanScore2.getText().toString());
+                MainActivity.ranklist.add(rank);
+                for(int j=0; j<MainActivity.ranklist.size()-1; j++) {
+                    for (int i = 0; i < MainActivity.ranklist.size() - 1-j; i++) {
+                        if (Integer.parseInt(MainActivity.ranklist.get(i).getScore()) < Integer.parseInt(MainActivity.ranklist.get(i + 1).getScore())) {
+                            String tmp = MainActivity.ranklist.get(i).getScore();
+                            MainActivity.ranklist.get(i).setScore(MainActivity.ranklist.get(i + 1).getScore());
+                            MainActivity.ranklist.get(i + 1).setScore(tmp);
+                        }
+                    }
+                }
+
+                SharedPreferences prefs = getSharedPreferences("Rank", MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                String n = humanScore2.getText().toString();
+                for(int i=0; i<MainActivity.ranklist.size(); i++) {
+                    editor.putString(i + "rank", MainActivity.ranklist.get(i).getScore());
+                }
+                editor.commit();
+
                 alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

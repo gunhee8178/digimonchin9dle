@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -12,10 +13,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
 public class MainActivity extends Activity {
     static final String STATE_PLAY_BUTTON = "play_button";
     TextView title;
     Button playRPS, playMJB, quit;
+    static ArrayList<Ranking> ranklist = new ArrayList<Ranking>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +81,18 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(getApplicationContext(), gamble.class);
         finish();
         startActivity(intent);
+    }
+
+    public void showRanking(View v) {
+        setContentView(R.layout.show_ranking);
+        SharedPreferences mPrefs = getSharedPreferences("Rank", MODE_PRIVATE);
+        TextView t = (TextView) findViewById(R.id.text);
+        t.setText("Ranking!!");
+        System.out.println(ranklist.size());
+        for(int i=0; i<ranklist.size(); i++) {
+            String irank = mPrefs.getString(i + "rank", null);
+            t.append("\n"+irank);
+        }
     }
 
     public void quit(View v) {
