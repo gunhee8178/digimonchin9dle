@@ -78,44 +78,42 @@ public class PlayMJB extends Activity{
             cpuScore2.setText(cpuWins2.toString());
             yourturn = 0;
             if(cpuWins2==Life.life){
-                String score = humanScore2.getText().toString();
                 AlertDialog.Builder alert = new AlertDialog.Builder(PlayMJB.this);
                 alert.setTitle("Game Over!");
-                alert.setMessage("Your score is "+Integer.parseInt(score)+" wins!");
+                alert.setMessage("Your score is "+Integer.parseInt(humanScore2.getText().toString())+" wins!");
 
-                EditText edit = new EditText(this);
+                final EditText edit = new EditText(this);
                 edit.setHint("Enter your name");
                 alert.setView(edit);
-                String name2 = edit.getText().toString();
-                System.out.println(name2);
-
-
-                Ranking rank = new Ranking(name2, score);
-                MainActivity.ranklist.add(rank);
-                for(int j=0; j<MainActivity.ranklist.size()-1; j++) {
-                    for (int i = 0; i < MainActivity.ranklist.size() - 1-j; i++) {
-                        if (Integer.parseInt(MainActivity.ranklist.get(i).getScore()) < Integer.parseInt(MainActivity.ranklist.get(i + 1).getScore())) {
-                            String tmp = MainActivity.ranklist.get(i).getScore();
-                            MainActivity.ranklist.get(i).setScore(MainActivity.ranklist.get(i + 1).getScore());
-                            MainActivity.ranklist.get(i + 1).setScore(tmp);
-                            String tmp2 = MainActivity.ranklist.get(i).getName();
-                            MainActivity.ranklist.get(i).setName(MainActivity.ranklist.get(i + 1).getName());
-                            MainActivity.ranklist.get(i + 1).setName(tmp2);
-                        }
-                    }
-                }
-
-                SharedPreferences prefs = getSharedPreferences("Rank", MODE_PRIVATE);
-                SharedPreferences.Editor editor = prefs.edit();
-                for(int i=0; i<MainActivity.ranklist.size(); i++) {
-                    editor.putString(i + "rank_name", MainActivity.ranklist.get(i).getName());
-                    editor.putString(i + "rank_score", MainActivity.ranklist.get(i).getScore());
-                }
-                editor.commit();
 
                 alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        String name2 = edit.getText().toString();
+                        int score = Integer.parseInt(humanScore2.getText().toString());
+                        Ranking rank = new Ranking(name2, score);
+                        MainActivity.ranklist.add(rank);
+                        int size = MainActivity.ranklist.size();
+                        for(int i=0; i<size-1; i++) {
+                            for (int j = 0; j<size-1-i; j++) {
+                                Ranking irank = MainActivity.ranklist.get(j);
+                                Ranking iirank = MainActivity.ranklist.get(j+1);
+                                if (irank.getScore() < iirank.getScore()) {
+                                    Ranking swap_rank = irank;
+                                    irank = iirank;
+                                    iirank = swap_rank;
+                                }
+                            }
+                        }
+
+                        SharedPreferences prefs = getSharedPreferences("Rank", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        for(int i=0; i<size; i++) {
+                            editor.putString(i + "rank_name", MainActivity.ranklist.get(i).getName());
+                            editor.putInt(i + "rank_score", MainActivity.ranklist.get(i).getScore());
+                        }
+                        editor.commit();
+
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         finish();
                         startActivity(intent);

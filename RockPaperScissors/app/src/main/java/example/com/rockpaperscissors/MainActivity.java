@@ -89,10 +89,10 @@ public class MainActivity extends Activity {
         TextView t = (TextView) findViewById(R.id.text);
         t.setText("Ranking!!");
         for(int i=0; i<ranklist.size(); i++) {
-            String rank1 = mPrefs.getString(i + "rank_name", null);
-            String rank2 = mPrefs.getString(i + "rank_score", null);
-            t.append("\n"+rank1);
-            t.append(rank2);
+            String rank_name = mPrefs.getString(i + "rank_name", null);
+            int rank_score = mPrefs.getInt(i + "rank_score", 0);
+            t.append("\n"+(i+1)+". "+rank_name);
+            t.append(" - "+rank_score+" points");
         }
     }
 
