@@ -21,12 +21,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.2.1_44723f594a5fb7e8e3ec470ead2c181f401a7c41\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
         <dex dex="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.2.1_e5bd170373fe52389c9dd84684ceab5b2a85fda5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ef6a6ed31b42b57ba65eee39c602678d966c6c5f">
+        <dex dex="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_59942a849d43ea9ba9ff8c6393f1cc2b1bc033eb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.2.1_18c3bc46fb0d60693bdcb60a241974e25f35906a\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -54,33 +81,6 @@
         revision="23.0.2"
         sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
         <dex dex="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.2.1_937b86ec6906afb5ee748b8d99e20a162785d497\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="673d77a5bbddd766037f088e775df525c46407f0">
-        <dex dex="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.2.1_44723f594a5fb7e8e3ec470ead2c181f401a7c41\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
-        <dex dex="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.2.1_18c3bc46fb0d60693bdcb60a241974e25f35906a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="802f2a49ce6ae00945a820ba9fea27824b9be782">
-        <dex dex="C:\Users\baesh\Documents\GitHub\digimonchin9dle\RockPaperScissors\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_59942a849d43ea9ba9ff8c6393f1cc2b1bc033eb\classes.dex" />
     </item>
 
 </items>

@@ -18,6 +18,9 @@
         <activity android:name=".PlayMJB" />
         <activity android:name=".PlayRPS" />
         <activity android:name=".gamble"/>
+        <activity
+            android:name=".showRanking"
+            android:theme="@android:style/Theme.Dialog"/>
     </application>
 
 </manifest>

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -13,18 +12,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
-
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class MainActivity extends Activity {
     static final String STATE_PLAY_BUTTON = "play_button";
     TextView title;
     Button playRPS, playMJB, quit;
     static ArrayList<Ranking> ranklist = new ArrayList<Ranking>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,13 +33,11 @@ public class MainActivity extends Activity {
 
     public void playRPS(View v) {
         Intent intent = new Intent(getApplicationContext(), PlayRPS.class);
-        finish();
         startActivity(intent);
     }
 
     public void playMJB(View v) {
         Intent intent = new Intent(getApplicationContext(), PlayMJB.class);
-        finish();
         startActivity(intent);
     }
 
@@ -79,21 +71,12 @@ public class MainActivity extends Activity {
 
     public void Gamble(View v) {
         Intent intent = new Intent(getApplicationContext(), gamble.class);
-        finish();
         startActivity(intent);
     }
 
     public void showRanking(View v) {
-        setContentView(R.layout.show_ranking);
-        SharedPreferences mPrefs = getSharedPreferences("Rank", MODE_PRIVATE);
-        TextView t = (TextView) findViewById(R.id.text);
-        t.setText("Ranking!!");
-        for(int i=0; i<ranklist.size(); i++) {
-            String rank_name = mPrefs.getString(i + "rank_name", null);
-            int rank_score = mPrefs.getInt(i + "rank_score", 0);
-            t.append("\n"+(i+1)+". "+rank_name);
-            t.append(" - "+rank_score+" points");
-        }
+        Intent intent = new Intent(getApplicationContext(), showRanking.class);
+        startActivity(intent);
     }
 
     public void quit(View v) {

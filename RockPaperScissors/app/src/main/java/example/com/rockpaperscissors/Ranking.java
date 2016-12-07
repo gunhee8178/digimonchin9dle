@@ -2,12 +2,6 @@ package example.com.rockpaperscissors;
 
 import android.app.Activity;
 
-import java.util.ArrayList;
-
-/**
- * Created by baesh on 2016-12-05.
- */
-
 public class Ranking extends Activity{
     String name;
     int score;
@@ -16,10 +10,15 @@ public class Ranking extends Activity{
         this.score = s;
     }
 
+    String getName() {
+        return this.name;
+    }
     int getScore() {
         return this.score;
     }
-    String getName() {
-        return this.name;
+
+    void setRanking(String n, int s) {
+        this.name = n;
+        this.score = s;
     }
 }

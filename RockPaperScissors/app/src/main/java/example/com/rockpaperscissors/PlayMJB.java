@@ -11,9 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.Collections;
-import java.util.Comparator;
-
 public class PlayMJB extends Activity{
     Button rock2, paper2, scissors2;
     TextView humanDraw2, cpuDraw2, winner2, humanScore2, cpuScore2;
@@ -100,8 +97,8 @@ public class PlayMJB extends Activity{
                                 Ranking iirank = MainActivity.ranklist.get(j+1);
                                 if (irank.getScore() < iirank.getScore()) {
                                     Ranking swap_rank = irank;
-                                    irank = iirank;
-                                    iirank = swap_rank;
+                                    irank.setRanking(iirank.getName(), iirank.getScore());
+                                    iirank.setRanking(swap_rank.getName(), swap_rank.getScore());
                                 }
                             }
                         }
