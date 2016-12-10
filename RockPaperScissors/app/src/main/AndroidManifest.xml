@@ -20,7 +20,7 @@
         <activity android:name=".gamble"/>
         <activity
             android:name=".showRanking"
-            android:theme="@android:style/Theme.Dialog"/>
+            android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
     </application>
 
 </manifest>

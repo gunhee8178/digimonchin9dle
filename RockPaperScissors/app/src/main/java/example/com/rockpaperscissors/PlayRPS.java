@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class PlayRPS extends Activity {
@@ -102,17 +104,49 @@ public class PlayRPS extends Activity {
         }
 
         if(Integer.parseInt(cpuScore.getText().toString())==Life.life){
-            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            AlertDialog.Builder alert = new AlertDialog.Builder(PlayRPS.this);
+            alert.setTitle("Game Over!");
+            alert.setMessage("Your score is "+Integer.parseInt(humanScore.getText().toString())+" wins, "+Integer.parseInt(ties.getText().toString())+" ties!");
+
+            final EditText edit = new EditText(this);
+            edit.setHint("Enter your name");
+            alert.setView(edit);
+
             alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+                    String name = edit.getText().toString();
+                    int score = Integer.parseInt(humanScore.getText().toString());
+                    int draw = Integer.parseInt(ties.getText().toString());
+                    RRanking rank = new RRanking(name, score, draw);
+                    MainActivity.Rranklist.add(rank);
+                    int size = MainActivity.Rranklist.size();
+                    for(int i=0; i<size-1; i++) {
+                        for (int j = 0; j<size-1-i; j++) {
+                            RRanking irank = MainActivity.Rranklist.get(j);
+                            RRanking iirank = MainActivity.Rranklist.get(j+1);
+                            if (irank.getScore() < iirank.getScore() || (irank.getScore() == iirank.getScore() && irank.getDraw() < iirank.getDraw())) {
+                                RRanking swap_rank = irank;
+                                irank.setRanking(iirank.getName(), iirank.getScore(), iirank.getDraw());
+                                iirank.setRanking(swap_rank.getName(), swap_rank.getScore(), swap_rank.getDraw());
+                            }
+                        }
+                    }
+
+                    SharedPreferences prefs = getSharedPreferences("RankR", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    for(int i=0; i<size; i++) {
+                        editor.putString(i + "rank_name", MainActivity.Rranklist.get(i).getName());
+                        editor.putInt(i + "rank_score", MainActivity.Rranklist.get(i).getScore());
+                        editor.putInt(i + "rank_draw", MainActivity.Rranklist.get(i).getDraw());
+                    }
+                    editor.commit();
+
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     finish();
                     startActivity(intent);
                 }
             });
-            alert.setTitle("Game Over!");
-            alert.setMessage("Your score is "+Integer.parseInt(humanScore.getText().toString())+" wins, "+Integer.parseInt(ties.getText().toString())+" ties!");
             alert.show();
         }
     }

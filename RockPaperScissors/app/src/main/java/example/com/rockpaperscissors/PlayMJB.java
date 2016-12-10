@@ -88,26 +88,26 @@ public class PlayMJB extends Activity{
                     public void onClick(DialogInterface dialog, int which) {
                         String name2 = edit.getText().toString();
                         int score = Integer.parseInt(humanScore2.getText().toString());
-                        Ranking rank = new Ranking(name2, score);
-                        MainActivity.ranklist.add(rank);
-                        int size = MainActivity.ranklist.size();
+                        MRanking rank = new MRanking(name2, score);
+                        MainActivity.Mranklist.add(rank);
+                        int size = MainActivity.Mranklist.size();
                         for(int i=0; i<size-1; i++) {
                             for (int j = 0; j<size-1-i; j++) {
-                                Ranking irank = MainActivity.ranklist.get(j);
-                                Ranking iirank = MainActivity.ranklist.get(j+1);
+                                MRanking irank = MainActivity.Mranklist.get(j);
+                                MRanking iirank = MainActivity.Mranklist.get(j+1);
                                 if (irank.getScore() < iirank.getScore()) {
-                                    Ranking swap_rank = irank;
+                                    MRanking swap_rank = irank;
                                     irank.setRanking(iirank.getName(), iirank.getScore());
                                     iirank.setRanking(swap_rank.getName(), swap_rank.getScore());
                                 }
                             }
                         }
 
-                        SharedPreferences prefs = getSharedPreferences("Rank", MODE_PRIVATE);
+                        SharedPreferences prefs = getSharedPreferences("RankM", MODE_PRIVATE);
                         SharedPreferences.Editor editor = prefs.edit();
                         for(int i=0; i<size; i++) {
-                            editor.putString(i + "rank_name", MainActivity.ranklist.get(i).getName());
-                            editor.putInt(i + "rank_score", MainActivity.ranklist.get(i).getScore());
+                            editor.putString(i + "rank_name", MainActivity.Mranklist.get(i).getName());
+                            editor.putInt(i + "rank_score", MainActivity.Mranklist.get(i).getScore());
                         }
                         editor.commit();
 

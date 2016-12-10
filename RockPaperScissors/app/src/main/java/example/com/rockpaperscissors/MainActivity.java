@@ -18,7 +18,8 @@ public class MainActivity extends Activity {
     static final String STATE_PLAY_BUTTON = "play_button";
     TextView title;
     Button playRPS, playMJB, quit;
-    static ArrayList<Ranking> ranklist = new ArrayList<Ranking>();
+    static ArrayList<MRanking> Mranklist = new ArrayList<MRanking>();
+    static ArrayList<RRanking> Rranklist = new ArrayList<RRanking>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

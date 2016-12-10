@@ -1,29 +1,46 @@
 package example.com.rockpaperscissors;
 
 import android.app.Activity;
+import android.app.TabActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TabHost;
 import android.widget.TextView;
 
-public class showRanking extends Activity {
+public class showRanking extends TabActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.show_ranking);
+        TabHost tab = getTabHost();
+        TabHost.TabSpec spec;
+        LayoutInflater.from(this).inflate(R.layout.ranking, tab.getTabContentView(), true);
 
-        SharedPreferences mPrefs = getSharedPreferences("Rank", MODE_PRIVATE);
-        TextView t = (TextView) findViewById(R.id.rank_text);
-        t.setText("Ranking!!");
-        for(int i=0; i<MainActivity.ranklist.size(); i++) {
+        SharedPreferences mPrefs = getSharedPreferences("RankM", MODE_PRIVATE);
+        TextView mjbtext = (TextView) findViewById(R.id.mjb_rank);
+        mjbtext.setText("Ranking");
+        for(int i=0; i<MainActivity.Mranklist.size(); i++) {
             String rank_name = mPrefs.getString(i + "rank_name", null);
             int rank_score = mPrefs.getInt(i + "rank_score", 0);
-            t.append("\n"+(i+1)+". \""+rank_name);
-            t.append("\" - "+rank_score+" points");
+            mjbtext.append("\n"+(i+1)+". \""+rank_name);
+            mjbtext.append("\" - "+rank_score+" wins");
+        }
+
+        SharedPreferences rPrefs = getSharedPreferences("RankR", MODE_PRIVATE);
+        TextView rpstext = (TextView) findViewById(R.id.rps_rank);
+        rpstext.setText("Ranking");
+        for(int i=0; i<MainActivity.Mranklist.size(); i++) {
+            String rank_name = rPrefs.getString(i + "rank_name", null);
+            int rank_score = rPrefs.getInt(i + "rank_score", 0);
+            int rank_draw = rPrefs.getInt(i + "rank_draw", 0);
+            rpstext.append("\n"+(i+1)+". \""+rank_name);
+            rpstext.append("\" - "+rank_score+" wins");
+            rpstext.append(", "+rank_draw+" draws");
         }
 
         Button button_ok = (Button) findViewById(R.id.rank_ok);
@@ -33,5 +50,10 @@ public class showRanking extends Activity {
                 finish();
             }
         });
+
+        spec = tab.newTabSpec("tab1").setIndicator("RPS").setContent(R.id.tab1);
+        tab.addTab(spec);
+        spec = tab.newTabSpec("tab2").setIndicator("MJB").setContent(R.id.tab2);
+        tab.addTab(spec);
     }
 }
