@@ -20,6 +20,7 @@
         <activity android:name=".gamble"/>
         <activity
             android:name=".showRanking"
+            android:label="Ranking!!!"
             android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
     </application>
 

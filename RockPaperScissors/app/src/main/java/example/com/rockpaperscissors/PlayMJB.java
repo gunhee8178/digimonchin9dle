@@ -97,8 +97,8 @@ public class PlayMJB extends Activity{
                                 MRanking iirank = MainActivity.Mranklist.get(j+1);
                                 if (irank.getScore() < iirank.getScore()) {
                                     MRanking swap_rank = irank;
-                                    irank.setRanking(iirank.getName(), iirank.getScore());
-                                    iirank.setRanking(swap_rank.getName(), swap_rank.getScore());
+                                    irank.setRanking(iirank);
+                                    iirank.setRanking(swap_rank);
                                 }
                             }
                         }

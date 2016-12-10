@@ -17,8 +17,8 @@ public class MRanking extends Activity{
         return this.score;
     }
 
-    void setRanking(String n, int s) {
-        this.name = n;
-        this.score = s;
+    void setRanking(MRanking m) {
+        this.name = m.getName();
+        this.score = m.getScore();
     }
 }

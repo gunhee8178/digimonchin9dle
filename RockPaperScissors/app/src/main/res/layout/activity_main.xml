@@ -9,7 +9,8 @@
         android:id="@+id/titleView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_portrait"
+        android:text="Rock-Paper
+                -Scissors"
         android:layout_centerHorizontal="true"
         android:textSize="32sp"
         android:gravity="center" />
@@ -20,57 +21,83 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
 
         <Button
             android:id="@+id/playRPS"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:text="Play RPS"
-            android:textSize="32sp"
-            android:onClick="playRPS"
-            android:layout_width="250dp" />
+            android:textSize="25sp"
+            android:textStyle="bold|italic"
+            android:textColor="#ffffff"
+            android:background="@drawable/main_menu"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:onClick="playRPS" />
 
         <Button
             android:id="@+id/playMJB"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:text="Play MJB"
-            android:textSize="32sp"
-            android:onClick="playMJB"
-            android:layout_width="250dp" />
+            android:textSize="25sp"
+            android:textStyle="bold|italic"
+            android:textColor="#ffffff"
+            android:background="@drawable/main_menu"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:onClick="playMJB" />
 
         <Button
             android:id="@+id/setLife"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:text="Life Setting"
-            android:textSize="32sp"
-            android:onClick="setLife"
-            android:layout_width="250dp" />
+            android:textSize="25sp"
+            android:textStyle="bold|italic"
+            android:textColor="#ffffff"
+            android:background="@drawable/main_menu"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:onClick="setLife" />
 
         <Button
             android:id="@+id/gamble"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:text="Gamble"
-            android:textSize="32sp"
-            android:onClick="Gamble"
-            android:layout_width="250dp" />
+            android:textSize="25sp"
+            android:textStyle="bold|italic"
+            android:textColor="#ffffff"
+            android:background="@drawable/main_menu"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:onClick="Gamble" />
 
         <Button
             android:id="@+id/rank"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="false"
-            android:text="ranking"
-            android:textSize="32sp"
-            android:onClick="showRanking"
-            android:layout_width="250dp" />
+            android:text="Ranking"
+            android:textSize="25sp"
+            android:textStyle="bold|italic"
+            android:textColor="#ffffff"
+            android:background="@drawable/main_menu"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:onClick="showRanking" />
 
     </LinearLayout>
 
@@ -79,13 +106,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="quit"
-        android:textSize="32sp"
-        android:onClick="quit"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:textColor="#ffffff"
+        android:background="@drawable/main_menu"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="200dp"
         android:layout_width="150dp"
-        android:layout_marginBottom="52dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/titleView"
-        android:layout_alignEnd="@+id/titleView" />
-
+        android:layout_below="@+id/linearLayout"
+        android:onClick="quit" />
 
 </RelativeLayout>

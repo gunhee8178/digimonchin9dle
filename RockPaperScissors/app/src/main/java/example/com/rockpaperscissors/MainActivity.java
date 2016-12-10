@@ -11,11 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class MainActivity extends Activity {
-    static final String STATE_PLAY_BUTTON = "play_button";
     TextView title;
     Button playRPS, playMJB, quit;
     static ArrayList<MRanking> Mranklist = new ArrayList<MRanking>();
@@ -25,11 +23,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        playRPS = (Button) findViewById(R.id.playRPS);
-        quit = (Button) findViewById(R.id.quit);
-        playMJB = (Button) findViewById(R.id.playMJB);
-        title = (TextView) findViewById(R.id.titleView);
     }
 
     public void playRPS(View v) {

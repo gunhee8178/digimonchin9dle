@@ -1,15 +1,11 @@
 package example.com.rockpaperscissors;
 
-import android.app.Activity;
 import android.app.TabActivity;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
@@ -19,10 +15,11 @@ public class showRanking extends TabActivity {
         super.onCreate(savedInstanceState);
         TabHost tab = getTabHost();
         TabHost.TabSpec spec;
-        LayoutInflater.from(this).inflate(R.layout.ranking, tab.getTabContentView(), true);
+        LayoutInflater.from(this).inflate(R.layout.show_ranking, tab.getTabContentView(), true);
 
         SharedPreferences mPrefs = getSharedPreferences("RankM", MODE_PRIVATE);
         TextView mjbtext = (TextView) findViewById(R.id.mjb_rank);
+        mjbtext.setTextSize(20);
         mjbtext.setText("Ranking");
         for(int i=0; i<MainActivity.Mranklist.size(); i++) {
             String rank_name = mPrefs.getString(i + "rank_name", null);
@@ -33,6 +30,7 @@ public class showRanking extends TabActivity {
 
         SharedPreferences rPrefs = getSharedPreferences("RankR", MODE_PRIVATE);
         TextView rpstext = (TextView) findViewById(R.id.rps_rank);
+        rpstext.setTextSize(20);
         rpstext.setText("Ranking");
         for(int i=0; i<MainActivity.Mranklist.size(); i++) {
             String rank_name = rPrefs.getString(i + "rank_name", null);
