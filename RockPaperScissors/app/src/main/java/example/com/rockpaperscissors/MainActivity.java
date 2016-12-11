@@ -7,17 +7,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainActivity extends Activity {
-    TextView title;
-    Button playRPS, playMJB, quit;
-    static ArrayList<MRanking> Mranklist = new ArrayList<MRanking>();
-    static ArrayList<RRanking> Rranklist = new ArrayList<RRanking>();
+    static ArrayList<RankingM> ranklistM = new ArrayList<RankingM>();
+    static ArrayList<RankingR> ranklistR = new ArrayList<RankingR>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +32,12 @@ public class MainActivity extends Activity {
     }
 
     public void setLife(View v) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
         final EditText edit = new EditText(this);
         edit.setInputType(InputType.TYPE_CLASS_NUMBER);
         edit.setHint("Set your life");
         alert.setTitle("Life Setting");
+        alert.setMessage("Set your life as you want to play. The default setting is 3.");
         alert.setView(edit);
 
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -69,7 +66,7 @@ public class MainActivity extends Activity {
     }
 
     public void showRanking(View v) {
-        Intent intent = new Intent(getApplicationContext(), showRanking.class);
+        Intent intent = new Intent(getApplicationContext(), ShowRanking.class);
         startActivity(intent);
     }
 

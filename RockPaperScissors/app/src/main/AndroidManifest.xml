@@ -19,7 +19,7 @@
         <activity android:name=".PlayRPS" />
         <activity android:name=".gamble"/>
         <activity
-            android:name=".showRanking"
+            android:name=".ShowRanking"
             android:label="Ranking!!!"
             android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
     </application>

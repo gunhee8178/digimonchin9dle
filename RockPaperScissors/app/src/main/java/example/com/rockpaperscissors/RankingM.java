@@ -2,10 +2,10 @@ package example.com.rockpaperscissors;
 
 import android.app.Activity;
 
-public class MRanking extends Activity{
+public class RankingM extends Activity{
     String name;
     int score;
-    public MRanking(String n, int s) {
+    public RankingM(String n, int s) {
         this.name = n;
         this.score = s;
     }
@@ -17,7 +17,7 @@ public class MRanking extends Activity{
         return this.score;
     }
 
-    void setRanking(MRanking m) {
+    void setRanking(RankingM m) {
         this.name = m.getName();
         this.score = m.getScore();
     }

@@ -118,17 +118,17 @@ public class PlayRPS extends Activity {
                     String name = edit.getText().toString();
                     int score = Integer.parseInt(humanScore.getText().toString());
                     int draw = Integer.parseInt(ties.getText().toString());
-                    RRanking rank = new RRanking(name, score, draw);
-                    MainActivity.Rranklist.add(rank);
-                    int size = MainActivity.Rranklist.size();
+                    RankingR rank = new RankingR(name, score, draw);
+                    MainActivity.ranklistR.add(rank);
+                    int size = MainActivity.ranklistR.size();
                     for(int i=0; i<size-1; i++) {
                         for (int j = 0; j<size-1-i; j++) {
-                            RRanking irank = MainActivity.Rranklist.get(j);
-                            RRanking iirank = MainActivity.Rranklist.get(j+1);
+                            RankingR irank = MainActivity.ranklistR.get(j);
+                            RankingR iirank = MainActivity.ranklistR.get(j+1);
                             if (irank.getScore() < iirank.getScore() || (irank.getScore() == iirank.getScore() && irank.getDraw() < iirank.getDraw())) {
-                                RRanking swap_rank = irank;
-                                irank.setRanking(iirank.getName(), iirank.getScore(), iirank.getDraw());
-                                iirank.setRanking(swap_rank.getName(), swap_rank.getScore(), swap_rank.getDraw());
+                                RankingR swap_rank = irank;
+                                irank.setRanking(iirank);
+                                iirank.setRanking(swap_rank);
                             }
                         }
                     }
@@ -136,9 +136,9 @@ public class PlayRPS extends Activity {
                     SharedPreferences prefs = getSharedPreferences("RankR", MODE_PRIVATE);
                     SharedPreferences.Editor editor = prefs.edit();
                     for(int i=0; i<size; i++) {
-                        editor.putString(i + "rank_name", MainActivity.Rranklist.get(i).getName());
-                        editor.putInt(i + "rank_score", MainActivity.Rranklist.get(i).getScore());
-                        editor.putInt(i + "rank_draw", MainActivity.Rranklist.get(i).getDraw());
+                        editor.putString(i + "rank_name", MainActivity.ranklistR.get(i).getName());
+                        editor.putInt(i + "rank_score", MainActivity.ranklistR.get(i).getScore());
+                        editor.putInt(i + "rank_draw", MainActivity.ranklistR.get(i).getDraw());
                     }
                     editor.commit();
 

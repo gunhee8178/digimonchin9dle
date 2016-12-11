@@ -2,11 +2,11 @@ package example.com.rockpaperscissors;
 
 import android.app.Activity;
 
-public class RRanking extends Activity{
+public class RankingR extends Activity{
     String name;
     int score;
     int draw;
-    public RRanking(String n, int s, int d) {
+    public RankingR(String n, int s, int d) {
         this.name = n;
         this.score = s;
         this.draw = d;
@@ -22,9 +22,9 @@ public class RRanking extends Activity{
         return this.draw;
     }
 
-    void setRanking(String n, int s, int d) {
-        this.name = n;
-        this.score = s;
-        this.draw = d;
+    void setRanking(RankingR r) {
+        this.name = r.getName();
+        this.score = r.getScore();
+        this.draw = r.getDraw();
     }
 }

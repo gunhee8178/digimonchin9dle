@@ -8,65 +8,71 @@
     android:layout_height="match_parent"
     >
 
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/humanview"
+        android:id="@+id/mjb_human_view"
         android:text="YOU"
         android:textStyle="bold"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/centerview"
-        android:layout_toStartOf="@+id/centerview"
+        android:layout_alignParentTop="false"
+        android:layout_toLeftOf="@+id/center_view"
+        android:layout_toStartOf="@+id/center_view"
+        android:layout_below="@+id/space"
         android:layout_marginRight="50dp"
         android:layout_marginEnd="50dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/centerview"
+        android:id="@+id/center_view"
         android:text=""
-        android:layout_alignTop="@+id/humanview"
+        android:layout_alignTop="@+id/mjb_human_view"
         android:layout_centerHorizontal="true" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/cpuview"
+        android:id="@+id/cpu_view"
         android:text="CPU"
         android:textStyle="bold"
-        android:layout_alignTop="@+id/centerview"
-        android:layout_toRightOf="@+id/centerview"
-        android:layout_toEndOf="@+id/centerview"
+        android:layout_alignTop="@+id/center_view"
+        android:layout_toRightOf="@+id/center_view"
+        android:layout_toEndOf="@+id/center_view"
         android:layout_marginLeft="50dp"
         android:layout_marginStart="50dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/humanscore2"
+        android:id="@+id/mjb_human_score"
         android:text="0"
         android:textStyle="bold"
         android:textColor="@color/colorScoreboard"
-        android:layout_below="@+id/humanview"
-        android:layout_alignRight="@+id/humanview"
-        android:layout_alignEnd="@+id/humanview"
+        android:layout_below="@+id/mjb_human_view"
+        android:layout_alignRight="@+id/mjb_human_view"
+        android:layout_alignEnd="@+id/mjb_human_view"
         android:freezesText="true"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/cpuscore2"
+        android:id="@+id/mjb_cpu_score"
         android:text="0"
         android:textStyle="bold"
         android:textColor="@color/colorScoreboard"
-        android:layout_below="@+id/cpuview"
-        android:layout_alignRight="@+id/cpuview"
-        android:layout_alignEnd="@+id/cpuview"
+        android:layout_below="@+id/cpu_view"
+        android:layout_alignRight="@+id/cpu_view"
+        android:layout_alignEnd="@+id/cpu_view"
         android:freezesText="true"/>
 
     <RelativeLayout
         android:id="@+id/drawstextview2"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_below="@+id/humanscore2">
+        android:layout_below="@+id/mjb_human_score">
         <TextView
-            android:id="@+id/humandraw2"
+            android:id="@+id/mjb_human_hand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -75,7 +81,7 @@
             android:layout_marginStart="50dp"
             android:layout_marginLeft="50dp"/>
         <TextView
-            android:id="@+id/cpudraw2"
+            android:id="@+id/mjb_cpu_hand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="50dp"
@@ -84,21 +90,21 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"/>
         <TextView
+            android:id="@+id/mjb_winner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/winner2"
             android:layout_marginTop="30dp"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/buttons2"
+        android:id="@+id/mjb_buttons"
         android:layout_below="@+id/drawstextview2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal">
         <Button
-            android:id="@+id/rock2"
+            android:id="@+id/mjb_rock"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
@@ -106,7 +112,7 @@
             android:minHeight="0dp"
             android:background="@drawable/rock"/>
         <Button
-            android:id="@+id/paper2"
+            android:id="@+id/mjb_paper"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
@@ -114,7 +120,7 @@
             android:minHeight="0dp"
             android:background="@drawable/paper"/>
         <Button
-            android:id="@+id/scissors2"
+            android:id="@+id/mjb_scissors"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
@@ -122,4 +128,11 @@
             android:minHeight="0dp"
             android:background="@drawable/scissors"/>
     </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/center_view"
+        android:layout_alignEnd="@+id/center_view" />
 </RelativeLayout>
