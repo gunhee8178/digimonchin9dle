@@ -9,13 +9,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 //import static example.com.rockpaperscissors.Money.money;
 
 public class gamble extends Activity {
 
         TextView humanDraw, cpuDraw, humanScore, ties, cpuScore, winner, txmoney;
-        Button rock, paper, scissors;
+        Button rock, paper, scissors, showMoney;
         int money = 500;
         int best = money;
 
@@ -27,6 +28,7 @@ public class gamble extends Activity {
             rock = (Button) findViewById(R.id.rock);
             paper = (Button) findViewById(R.id.paper);
             scissors = (Button) findViewById(R.id.scissors);
+            showMoney = (Button) findViewById(R.id.showMoney);
 
             humanDraw = (TextView) findViewById(R.id.humandraw);
             cpuDraw = (TextView) findViewById(R.id.cpudraw);
@@ -76,7 +78,18 @@ public class gamble extends Activity {
 
                 }
             });
+            showMoney.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), money+"원이 있습니다", Toast.LENGTH_LONG).show();
+
+                }
+            });
+
+
         }
+
+
 
         private void checkDrawWinner(String humanDraw, String cpuDraw) {
             if (humanDraw.equals(cpuDraw)) {
