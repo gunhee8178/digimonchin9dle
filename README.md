@@ -15,19 +15,24 @@ We will add some functions and make application look beautiful.
 
 ## Goal of this Project
 
-1. Making a very simple game application which can play whenever and wherever. 
+1. Making a very simple game application which can play whenever and wherever. So We can play When you are bored  
      
-     - 심심할때 하면 나름 시간 때우기 좋은 그런 게임을 만들고 싶습니다.
+     - 심심할때 하면 나름 시간 때우기 좋은 그런 게임을 만들고 싶다.
      
-2. Making the completive game like the games in playstore or appstore.       
-      - 장풍키우기라는 게임이 플레이스토에 있는데 그 게임은 그래픽도 게임 구조도 간단하지만 상당히 완성도가 높았다. 
+2. Making the completive game like jangpungkiugi whose graphic and strucures are simple.I want to upload it to the Play Store sometime with a high quality result.
+      - 장풍키우기라는 게임이 플레이스토에 있는데 그 게임은 그래픽도 게임 구조도 간단하지만 상당히 완성도가 높았다. 
       우리의 게임도 간단해도 완성도가 높은 어플로 언젠가 플레이스토어에 올려보고 싶다.
 
-3. Applying neat design. 
-      -  이전에도 
+##Directing point
 
-##Why we do this project?
+1. We can't find MukZiBa in appstore.
 
+   - 묵찌빠를 할 수 있는 어플이 앱스토어에 없었다.
+   
+2. This is our First project about Android. We make this game as simple as we can
+   
+   - 처음하는 안드로이드 프로젝트 이기에 복잡하게 만들지 않고 최대한 간단하게 만드려 한다.
+   
 ## Things we can do
 
 1. Play classic Rock-Paper-Scissors
