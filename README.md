@@ -33,7 +33,7 @@ We will add some functions and make application look beautiful.
 
 2. Play Mugjjippa
 
-3. Play gamble mode
+3. Play gamble mode (incomplete)
 
 4. See the rank
 
