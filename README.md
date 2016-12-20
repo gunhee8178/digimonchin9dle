@@ -7,15 +7,15 @@ We are based on the following project... https://github.com/lacrossebjorne/RockP
 
 We will add some functions and make application look beautiful.
 
-## Our Members are...
+## We are Digimonchingudle
 
 * gunhee Han : coding, designing
 
 * seonghun Bae : coding!! , documentation
 
-## What we want to add
+## Goal of this Project
 
-1. On main page, add two buttons to play Mugjjippa and exit the app.
+1. Making a very simple game application which can play whenever and wherever. 
 
 2. Add Korean Rock-Paper-Scissors called Mugjjippa.
 
@@ -30,6 +30,8 @@ We will add some functions and make application look beautiful.
 
 5. Add Gamble System. When you win the game, you can get money that the pointer points.
 
+##Why we do this project?
+
 ## Things we can do
 
 1. Play classic Rock-Paper-Scissors
@@ -40,5 +42,11 @@ We will add some functions and make application look beautiful.
 
 4. See the rank
 
-## And...
-Programing by Java
+
+
+##Licence & Language
+
+*Programing by Java
+
+*GPL 3.0 
+     -
