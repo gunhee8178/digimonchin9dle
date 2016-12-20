@@ -28,23 +28,29 @@ We will add some functions and make application look beautiful.
 2. This is our First project about Android. We make this game as simple as we can
    
 ## Things we can do
-
-1. Play classic Rock-Paper-Scissors
+			
+1. Play classic Rock-Paper-Scissors       
 
 2. Play Mugjjippa
 
-3. Play gamble mode (incomplete)
+3. Play gamble mode (incomplete)			   
 
 4. See the rank
 
 
 
-##Licence & Language
+## Licence & Language
 
 *Programing by Java
 
 *[GPL 3.0](https://github.com/gunhee8178/digimonchin9dle/blob/master/LICENSE)
 
-##plan for project
+## plan for project
 
    This project is a school lecture project, but it will be registered in the Play Store and will continue to be managed as    soon as the semester is over. For sure not right now. After a little more refinement
+   
+## ScreenShot
+   
+   ![1](https://github.com/gunhee8178/digimonchin9dle/blob/master/ScreenShot/1.png?raw=true)           ![2](https://github.com/gunhee8178/digimonchin9dle/blob/master/ScreenShot/2.png?raw=true)
+   ![3](https://github.com/gunhee8178/digimonchin9dle/blob/master/ScreenShot/5.png?raw=true)
+   ![4](https://github.com/gunhee8178/digimonchin9dle/blob/master/ScreenShot/4.png?raw=true)
