@@ -98,17 +98,30 @@
             android:id="@+id/scissors"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.19"
+            android:layout_weight="1.22"
             android:text="scissors"/>
     </LinearLayout>
+
+    <Button
+        android:text="money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="71dp"
+        android:id="@+id/showMoney"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/humantextview"
+        android:layout_alignStart="@+id/humantextview" />
 
     <RelativeLayout
         android:id="@+id/drawstextview"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_alignBottom="@+id/buttons"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
         <TextView
             android:id="@+id/humandraw"
             android:layout_width="wrap_content"
@@ -134,14 +147,6 @@
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
-    <Button
-        android:text="Money"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="66dp"
-        android:id="@+id/showMoney" />
 </RelativeLayout>
 
 

@@ -10,8 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.view.View.OnClickListener;
 
-//import static example.com.rockpaperscissors.Money.money;
+import static android.widget.Toast.*;
+
 
 /**
  * This class is for playing gamble mode.
@@ -43,7 +45,6 @@ public class gamble extends Activity {
             txmoney = (TextView) findViewById(R.id.money);
 
 //            Integer money = Integer.parseInt(txmoney.getText().toString());
-//            money = Money.money;
 //            txmoney.setText("500");
             rock.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -82,13 +83,14 @@ public class gamble extends Activity {
 
                 }
             });
-            showMoney.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), money+"원이 있습니다", Toast.LENGTH_LONG).show();
 
-                }
-            });
+//            showMoney.setOnClickListener(new OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                makeText(getApplicationContext(), money+"원이 있습니다", LENGTH_LONG).show();
+//
+//                }
+//            });
 
 
         }
