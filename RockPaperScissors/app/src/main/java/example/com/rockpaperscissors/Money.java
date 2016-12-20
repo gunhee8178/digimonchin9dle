@@ -3,7 +3,8 @@ package example.com.rockpaperscissors;
 import android.app.Activity;
 
 /**
- * Created by hangunhee on 2016. 12. 5..
+ * This class show your money.
+ * @author HanGunHee
  */
 
     public class Money extends Activity {

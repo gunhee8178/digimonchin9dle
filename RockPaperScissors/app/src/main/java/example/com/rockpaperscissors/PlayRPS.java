@@ -11,6 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * This class is for playing Rock-Paper-Scissors.
+ * @author bring from github. BaeSeongHun. HanGunHee
+ */
 public class PlayRPS extends Activity {
     TextView humanDraw, cpuDraw, humanScore, ties, cpuScore, winner;
     Button rock, paper, scissors;
@@ -59,6 +63,14 @@ public class PlayRPS extends Activity {
         });
     }
 
+    /**
+     * This method shows
+     * 1) who wins
+     * 2) score of human and cpu
+     * 3) when finish the game, show human's win and draw score, take user name, and save the data on the class RankingR
+     * @param humanDraw what human hand
+     * @param cpuDraw what cpu hand
+     */
     private void checkDrawWinner(String humanDraw, String cpuDraw) {
         if (humanDraw.equals(cpuDraw)) {
             winner.setText("TIE!");

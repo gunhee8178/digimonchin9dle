@@ -9,6 +9,10 @@ import android.widget.Button;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+/**
+ * This class is to show your rank.
+ * @author BaeSeongHun. HanGunHee
+ */
 public class ShowRanking extends TabActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -11,6 +11,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 import java.util.ArrayList;
 
+/**
+ * This is the main class. When this project runs, this class is implemented and show the activity.
+ * @author bring from github. BaeSeongHun. HanGunHee
+ */
 public class MainActivity extends Activity {
     static ArrayList<RankingM> ranklistM = new ArrayList<RankingM>();
     static ArrayList<RankingR> ranklistR = new ArrayList<RankingR>();
@@ -31,6 +35,9 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    /**
+     * This method is for setting life by using a dialog and edittext in it.
+     */
     public void setLife(View v) {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         final EditText edit = new EditText(this);

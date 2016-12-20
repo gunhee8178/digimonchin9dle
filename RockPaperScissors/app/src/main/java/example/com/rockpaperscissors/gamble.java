@@ -13,6 +13,10 @@ import android.widget.Toast;
 
 //import static example.com.rockpaperscissors.Money.money;
 
+/**
+ * This class is for playing gamble mode.
+ * @author HanGunHee
+ */
 public class gamble extends Activity {
 
         TextView humanDraw, cpuDraw, humanScore, ties, cpuScore, winner, txmoney;

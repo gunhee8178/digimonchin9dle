@@ -1,6 +1,10 @@
 package example.com.rockpaperscissors;
 
 import android.app.Activity;
+/**
+ * This class is to store user name, score and draws for rps and get them at other class.
+ * @author HanGunHee
+ */
 
 public class RankingR extends Activity{
     String name;

@@ -1,7 +1,10 @@
 package example.com.rockpaperscissors;
 
 import android.app.Activity;
-
+/**
+ * This class is to store user name and score for mjb and get them at other class.
+ * @author BaeSeongHun
+ */
 public class RankingM extends Activity{
     String name;
     int score;

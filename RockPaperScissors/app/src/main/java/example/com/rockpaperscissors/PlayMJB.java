@@ -13,6 +13,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * This class is for playing Mukzzibba.
+ * @author BaeSeongHun
+ */
 public class PlayMJB extends Activity{
     Button rock, paper, scissors;
     TextView human_hand, cpu_hand, winner, human_score, cpu_score;
@@ -60,6 +64,14 @@ public class PlayMJB extends Activity{
         });
     }
 
+    /**
+     * This method shows
+     * 1) who wins
+     * 2) change of human and cpu score
+     * 3) when finish the game, make a dialog, take user name, and save this data on class RankingM.
+     * @param human_hand what we hand
+     * @param cpu_hand what cpu hand
+     */
     private void checkDrawwinner(String human_hand, String cpu_hand) {
         if (human_hand.equals(cpu_hand) && your_turn==0) {
             winner.setText("Again!");
