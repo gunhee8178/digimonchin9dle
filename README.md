@@ -37,6 +37,8 @@ We will add some functions and make application look beautiful.
 
 4. See the rank
 
+5. Set your Life
+
 
 
 ## Licence & Language
