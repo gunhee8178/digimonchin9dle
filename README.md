@@ -16,19 +16,16 @@ We will add some functions and make application look beautiful.
 ## Goal of this Project
 
 1. Making a very simple game application which can play whenever and wherever. 
-
-2. Add Korean Rock-Paper-Scissors called Mugjjippa.
-
-     - Make Help button for knowing How to play the game.
-      
-3. Add life System. So Players can choose their life.
+     
+     - 심심할때 하면 나름 시간 때우기 좋은 그런 게임을 만들고 싶습니다.
      
-     - (delete) We realized that it was difficult for us to set lives. So we locked lives. When the player loses 3 times, the game ends and a pop-up opens.
-     - (2016-12-04) You can set your life when you click 'Life Setting' button on main activity. You can only enter number and if you dont enter anything, you will see a Toast that says "Please Enter". Life value set by default is 3.
-  
-4. Add Rank System. Players can see the highest score among those who have played the same life.
+2. Making the completive game like the games in playstore or appstore.     
+      
+      - 장풍키우기라는 게임이 플레이스토에 있는데 그 게임은 그래픽도 게임 구조도 간단하지만 상당히 완성도가 높았다.
+       우리의 게임도 간단해도 완성도가 높은 어플로 언젠가 플레이스토어에 올려보고 싶다.
+3. Applying neat design. 
+     
 
-5. Add Gamble System. When you win the game, you can get money that the pointer points.
 
 ##Why we do this project?
 
@@ -50,3 +47,8 @@ We will add some functions and make application look beautiful.
 
 *GPL 3.0 
      -
+
+     - Make Help button for knowing How to play the game. 
+     
+     - (delete) We realized that it was difficult for us to set lives. So we locked lives. When the player loses 3           times, the game ends and a pop-up opens.
+     - (2016-12-04) You can set your life when you click 'Life Setting' button on main activity. You can only enter number and if you dont enter anything, you will see a Toast that says "Please Enter". Life value set by default is 3.
